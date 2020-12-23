@@ -1,0 +1,296 @@
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags%}
+
+<div class="join-us-content"> 
+  <div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">{{self.pop_up_title}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form method="post" action="{% url 'joinUsRequest' %}" >    
+            <!-- <form method="post" action="" >     -->
+              <!-- <form >     -->
+              {% csrf_token %}
+             
+          <div class="form-group ">
+              <div class="name">
+
+                  <select name="country" class="selectpicker" id="pet-select">
+                    
+
+{% for block in page.countries %}
+{% include_block block %}
+{% endfor %}
+
+                  </select>
+            </div>
+          </div>
+          
+          <div class="form-group ">
+            <div class="name">
+              <input type="text" name="community_name" class="form-control" placeholder="{{self.community_name_placeholder}}" required>
+            </div>
+        </div>
+            
+          <div class="form-group ">
+              <div class="text">
+                <input type="name" name="fullname" class="form-control" placeholder="{{self.fullname_placeholder}}" required>
+              </div>
+          </div>
+          <div class="form-group ">
+              <div class="name">
+                <input type="text" name="address" class="form-control" placeholder="{{self.address_placeholder}}" required>
+              </div>
+          </div>
+          <div class="form-group ">
+              <div class="name">
+                <input type="email" name="email" class="form-control" placeholder="{{self.email_placeholder}}" required>
+              </div>
+          </div>
+          <div class="form-group ">
+            <div class="name">
+              <input type="text" name="organisation_name" class="form-control" placeholder="{{self.organisation_name_placeholder}}">
+            </div>
+            
+        </div>
+        <div class="form-group ">
+            <div class="name">
+              <input type="text" name="organisation_address" class="form-control" placeholder="{{self.organisation_address_placeholder}}" required>
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="name">
+              <input type="text" name="organisation_type" class="form-control" placeholder="{{self.organisation_type_placeholder}}" >
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="name">
+              <input type="text" name="organisation_website" class="form-control" placeholder="{{self.organisation_website_placeholder}}">
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="name">
+              <input type="text" name="organisation_email" class="form-control" placeholder="{{self.organisation_email_placeholder}}">
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="name">
+                <label for="description">{{self.organistaion_describtion_title}}</label>
+
+                <textarea id="description" name="description"
+                          rows="5" cols="33"></textarea>
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="name">
+                <label for="description-community">{{self.community_describtion_title}}</label>
+
+                <textarea id="description-community" name="descriptio_-community"
+                          rows="5" cols="33"></textarea>
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="name">
+                <label for="description-suploc">{{self.organistaion_support_describtion_title}}</label>
+
+                <textarea id="description-suploc" name="description_suploc"
+                          rows="5" cols="33"></textarea>
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="name">
+                <label for="description-wilflide">{{self.organistaion_protect_title}}</label>
+
+                <textarea id="description-wilflide" name="description_wilflide"
+                          rows="5" cols="33"></textarea>
+            </div>
+        </div>
+        <div class="form-group ">
+            <div class="name">
+                <label for="description-trad">{{self.organistaion_culture_describtion_title}}</label>
+
+                <textarea id="description-trad" name="description_trad"
+                          rows="5" cols="33"></textarea>
+            </div>
+        </div>
+        
+          
+                
+                <h3 class="heading-color">{{self.boooking_request_title}}</h3>
+                <p>{{self.boooking_request_subtitle}}</p>
+                
+  
+              
+              <style>
+              textarea{
+                width:100%;
+      resize:none;
+              }
+              </style>
+
+              
+      
+<div class="form-group ">
+  <div class="name">
+      <input type="text" class="form-control" name="organisation_booking_contact" placeholder="{{self.organisation_booking_contact_placeholder}}" >
+
+      
+  </div>
+</div>
+<div class="form-group ">
+  <div class="name">
+      <input type="email" name="organisation_email_address" class="form-control" placeholder="{{self.organisation_email_address_placeholder}}" >
+
+      
+  </div>
+</div>
+<div class="form-group ">
+  <div class="name">
+      <input type="text" name="organisation_phone" class="form-control" placeholder="{{self.organisation_phone_placeholder}}" >
+
+      
+  </div>
+</div>
+<div class="form-group ">
+  <div class="name">
+      <input type="text" name="organisation_language" class="form-control" placeholder="{{self.organisation_language_placeholder}}" >
+
+      
+  </div>
+</div>
+  <p>{{self.finishing_text}}.</p>
+  <p>{{self.select_email_text}}</p>
+  
+<div class="form-group ">
+              <div class="name">
+
+                  <select name="emails">
+                    
+{% for block in page.emails %}
+{% include_block block %}
+{% endfor %}
+                  </select>
+            </div>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6Lc5AaYZAAAAAOtunMdSOxMZ8nQHb3EvFGhzGyW3"></div>
+
+              <div style="float: right;">
+  
+  
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+         
+                                 <button type="submit" class="btn btn-success" >Send</button>
+
+              </div>
+            </form>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+<div id="" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Send an email for partnership </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+      </div>
+      <div class="modal-body">
+        <p><a href="mailto:SDRI@gmail.com">SRDI@gmail.com</a></p>
+        <p><a href="mailto:Bridge@gmail.com">Bridge@gmail.com</a></p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+      <!-- Team member -->
+      <div class="row" style="padding:15px">
+      <a href="{{self.georgia_page.url}}">
+      <div class="col-md-4 horizontal-center w-auto" >
+          <div class="">
+              <div class="mainflip">
+                  <div class="frontside">
+                      <div class="card card-220">
+                          <div class="card-body text-center h-100 "style="margin:0; padding:.5px">
+
+                            <p style="margin:0;padding:0; height:100%;"><img class="modal-country-card img-fluid h-100" src="https://ak1.picdn.net/shutterstock/videos/7446361/thumb/1.jpg" alt="card image"></p>
+                          </div>
+                      </div>
+                  </div>
+         </div>
+      </div>
+      </a>
+      <h3 class="text-center modal-card-text">Georgia</h3>
+      </div>
+
+              <a href="{{self.ukraine_page.url}}">
+
+      <div class="col-md-4 horizontal-center w-auto">
+        <div class="">
+            <div class="mainflip">
+                <div class="frontside">
+                    <div class="card card-220">
+                        <div class="card-body text-center h-100 "style="margin:0; padding:.5px">
+
+                          <p style="margin:0;padding:0; height:100%;"><img class="modal-country-card img-fluid h-100" src="https://www.worldatlas.com/r/w728-h425-c728x425/upload/30/df/09/shutterstock-789130549.jpg" alt="card image"></p>
+                        </div>
+                    </div>
+                </div>
+       </div>
+    </div>
+    </a>
+    <h3 class="text-center modal-card-text">Ukraine</h3>
+
+    </div>
+            <a href="{{self.turkey_page.url}}">
+
+    <div class="col-md-4 horizontal-center w-auto">
+      <div class="">
+          <div class="mainflip">
+              <div class="frontside">
+                  <div class="card card-220">
+                      <div class="card-body text-center h-100 "style="margin:0; padding:.5px">
+
+                        <p style="margin:0;padding:0; height:100%;"><img class="modal-country-card img-fluid h-100" src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Flag_of_Turkey.svg" alt="card image"></p>
+                      </div>
+                  </div>
+              </div>
+     </div>
+  </div>
+  </a>
+  <h3 class="text-center modal-card-text">Turkey</h3>
+
+  </div>
+    </div>
+      
+      </div>
+  </div>
+
+</div>
+
+
+</div>
+
+<script>
+
+    var content = localStorage.setItem("join-us-content",document.querySelector(".join-us-content").innerHTML);
+
+</script>

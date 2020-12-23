@@ -1,0 +1,41 @@
+{% load wagtailcore_tags wagtailimages_tags%}
+
+<div class="">
+    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+        <div class="mainflip">
+            <div class="frontside">
+                <div class="card ">
+                    <div class="card-body text-center h-100 "style="margin:0; padding:.5px">
+
+                        <div style="margin:0;padding:0; height:100%;">
+                            <span class="centered" style="font-weight:bold; color:white;">{{self.title}} </span>
+
+  {% image self.image fill-2000x1798 as img%}
+                        <img class="lazy activity-card img-fluid h-100" data-src="{{img.url}}" alt="card image">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="backside">
+                <div class="card">
+                    <span href="" class="favme fa fa-heart" id="{{self.title.split|join:"-"}}" style="font-size:26px;"></span>
+
+                    <div class="card-body text-center">
+
+                        <h4 class="card-title card-title-text">{{self.title}}</h4>
+                        <p class="card-text card-main-text">{{self.activity_description}}
+                            </p>
+                            <br>
+                            <p class="card-main-text card-text">Availability: {{self.availability}}</p>  
+                            <p class="card-main-text card-text">Group size: {{self.group_size}}</p>  
+                        <p class="card-main-text card-text " id="{{self.title.split|join:"-"}}-price">Price per person: {{self.price_per_person}}</p>
+                        <p class="card-main-text card-text">Click the heart to select.  </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

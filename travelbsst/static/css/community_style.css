@@ -1,0 +1,115 @@
+.circles {
+  display: flex;
+  margin-top: 94px;
+  height: calc(100vh - 150px);
+  position: fixed;
+  justify-content: center;
+  flex-direction: column;
+  min-width:70px;
+
+  }
+  @-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}	
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+  }
+   
+  @-moz-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-moz-transform: translateY(0);}
+    40% {-moz-transform: translateY(-30px);}
+    60% {-moz-transform: translateY(-15px);}
+  }
+   
+  @-o-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-o-transform: translateY(0);}
+    40% {-o-transform: translateY(-30px);}
+    60% {-o-transform: translateY(-15px);}
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+  }
+
+
+
+ 
+ .step-text{
+  -moz-transition: all 1s ease-in;
+  -o-transition: all 1s ease-in;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+ }
+  .circle-with-text {
+    background-color: #00635e;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    padding: 15px;
+    display: flex;
+    height: 70px;
+    width: 70px;
+    color: #fff;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    
+  }
+  .circle-animate{
+    background-color:#ec7e24;
+    animation-name: spin;
+  animation-duration: 400ms;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+  @keyframes spin {
+      
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+@media(min-width:993px) and  (max-width:1110px)  {
+  .container {
+      max-width:868px;
+  }
+  .card-text{
+    font-size:0.8rem;
+  }
+}
+ 
+
+  @media (max-width: 768px) {
+    .step-text-animate{
+      animation: bounce 2s ease-in-out;
+      -webkit-animation: bounce 2s ease-in-out;
+      -moz-animation: bounce 2s ease-in-out;
+      -o-animation: bounce 2s ease-in-out;
+      color:#ec7e24;
+    }
+      .circles{
+
+          bottom:0;
+          display:none;
+          right:0;
+          left:0;
+          flex-direction:row;
+          height:auto;
+          top:auto;
+          transform: translateY(-25%);
+          z-index:100000000000;
+      }
+
+  }
+  @media(min-width:1200px) and  (max-width:1272px)  {
+    .container {
+        max-width:1040px;
+    }
+  }
+
+

@@ -1,0 +1,6 @@
+
+{% load wagtailcore_tags wagtailimages_tags%}
+
+  {% image self.image max-1489x798 as img%}
+
+<img class ="lazy" decoding="async" data-src="{{img.url}}">

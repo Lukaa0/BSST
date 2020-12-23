@@ -1,0 +1,240 @@
+
+.cards p {margin-bottom: 1.5em;}
+.cards h2 {font-size: 1.5em;}
+
+.thumbnail img {
+	display: block;
+	border: 0;
+	width: 100%;
+    height: 230px;
+    background-size: cover;
+    object-fit: cover;
+
+}
+
+
+/* Flexbox */
+@media screen and (min-width: 50em) {
+    
+    .outer-wrap {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+    
+    .content {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+    
+    .main-area {
+        -webkit-flex: 1 1 auto;
+            -ms-flex: 1 1 auto;
+                flex: 1 1 auto;
+        -webkit-order: 1;
+            -ms-flex-order: 1;
+                order: 1;
+    }
+  
+}
+
+/* Card Based Layout - Base styles */
+
+.card {
+	background: white;
+    margin-bottom: 2em;	
+    transition: all .2s ease-in-out;
+    cursor:pointer;
+}
+.scale-anim:hover{
+    transform: scale(1.1);
+
+}
+.scale-anim{
+    cursor:pointer;
+}
+
+
+.card a {
+	text-decoration: none;
+}
+
+.img-thumbnail{
+    height: 250px;
+
+object-fit: cover;
+
+min-width: 100%;
+cursor:pointer;
+background-position: center;
+
+object-position: center center;
+transition: all .2s ease-in-out;
+object-position: center;
+}
+.img-thumbnail:hover{
+    transform: scale(1.1);
+}
+
+.card-content {
+	padding: 1.4em;
+}
+
+.card-content h2 {
+	margin-top: 0;
+	margin-bottom: .5em;
+	font-weight: normal;
+}
+
+.card-content p {
+	font-size: 95%;
+}
+
+/* Flexbox stuff */
+
+@media screen and (min-width: 40em) {
+    .cards {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin-top: -1em;
+    }
+
+    .card {
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex: 0 1 calc(50% - .5em);
+            -ms-flex: 0 1 calc(50% - .5em);
+                flex: 0 1 calc(50% - .5em);
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 39.9em) {
+  
+  .main-area {padding: 0em;}
+  .card {margin-bottom: 0em;}	
+}
+
+@media screen and (min-width: 60em) {
+    .cards {
+        margin-top: inherit;
+    }
+    
+    .card {
+        /* -webkit-flex: 0 1 calc(33% - 1em);
+            -ms-flex: 0 1 calc(33% - 1em);
+                flex: 0 1 calc(33% - 1em); */
+        margin-bottom: 2em;
+    }
+}
+#sticky {
+    width: 100%;
+    height:100vh;
+    font-size: 2em;
+    float:left;
+}
+
+#sticky.stick {
+    position: fixed;
+    top: 0;
+    width:50%;
+    
+    z-index: 10;
+    border-radius: 0 0 0.5em 0.5em;
+}
+.tags {
+    margin:0;
+    padding:0;
+    position:absolute;
+    transition: all .2s ease-in-out;
+    top: 8px;
+  right: 16px;
+    list-style:none;
+}
+.tags li, .tags .tag {
+    float:left;
+    height:24px;
+    line-height:24px;
+    position:relative;
+    font-size:14px;
+}
+.tags .tag {
+    margin-left:20px;
+    padding:0 25px 0 12px;
+    background:#ec7e24;
+    color:#fff;
+    text-decoration:none;
+    -moz-border-radius-bottomright:2px;
+    -webkit-border-bottom-right-radius:2px;
+    border-bottom-right-radius:2px;
+    -moz-border-radius-topright:2px;
+    -webkit-border-top-right-radius:2px;
+    border-top-right-radius:2px;
+    
+    -webkit-box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 3px 3px 1px rgba(0,0,0,0.2);
+}
+.tags .tag:before {
+    content:"";
+    float:left;
+    position:absolute;
+    top:0;
+    right:-12px;
+    width:0;
+    height:0;
+    transition: all .2s ease-in-out;
+
+    border-color: #ec7e24  transparent  #ec7e24 transparent;
+    border-style:solid;
+    border-width:12px 12px 12px 0;
+}
+.tags .tag:after {
+    content:"";
+    position:absolute;
+    top:10px;
+    right:5px;
+    transition: all .2s ease-in-out;
+
+    float:left;
+    width:4px;
+    height:4px;
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:2px;
+    background:#fff;
+    -moz-box-shadow:-1px -1px 2px #004977;
+    -webkit-box-shadow:-1px -1px 2px #004977;
+    box-shadow:-1px -1px 2px #004977;
+}
+.tags .tag:hover:before {
+    border-color: #00635e transparent #00635e transparent;
+}
+.tags .tag:hover{
+    background:#00635e;
+    transform: scale(1.1);
+}
+
+.btn-booking{
+    display: block; 
+    margin:auto;
+     border-color: #ec7e24;
+     color:#ec7e24;
+     margin-bottom:15px
+}
+.btn-booking:hover{
+    background-color:#ec7e24;
+    border-color:#ec7e24
+}

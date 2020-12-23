@@ -1,0 +1,354 @@
+
+.ctct-c{
+  position:absolute;
+  height:10000px;
+}
+@media(max-width:768px){
+  .center-on-mobile{
+    margin:auto;
+  }
+}
+.burger-bar span{
+  background-color:#00635e;
+}
+@media (max-width:574px){
+  /* .card-1{
+    margin-top:-50% !important;
+  }
+  .card-2{
+    margin-top:-15% !important;
+  }
+  .card-3{
+    margin-top:-15% !important;
+  } */
+}
+@media (max-width:322px){
+  /* .card-text{
+    margin-top : -170px;
+  }
+  .card-1{
+    margin-top:-400px !important;
+  }
+  .card-2, .card-3{
+    margin-top:-160px !important;
+  }
+  .card-text{
+    margin-top:-100px !important;
+  } */
+}
+.ftco-section-2 .section-2-blocks-wrapper .button {
+
+    display: block;
+
+    position: absolute;
+
+    width: 100px;
+
+    height: 100px;
+
+    right: 0;
+
+    margin-right: -50px;
+
+    border-radius: 50%;
+
+    background:  #ec7e24;
+
+    z-index: 1;
+
+    top: 50%;
+
+    -webkit-transform: translateY(-50%);
+
+    -ms-transform: translateY(-50%);
+
+    transform: translateY(-50%);
+
+    -webkit-animation: pulse 2s infinite;
+
+    animation: pulse 2s infinite; }
+    .yellow-button{
+      display: block;
+
+      position: absolute;
+  
+      width: 100px;
+  
+      height: 100px;
+  
+      right: 0;
+  
+      margin-right: -50px;
+  
+      border-radius: 50%;
+  
+      background:  #ec7e24;
+  
+      z-index: 1;
+  
+      top: 50%;
+  
+      -webkit-transform: translateY(-50%);
+  
+      -ms-transform: translateY(-50%);
+  
+      transform: translateY(-50%);
+  
+      -webkit-animation: pulse 2s infinite;
+  
+      animation: pulse 2s infinite;
+    }
+    @media (max-width: 572px) {
+
+    }
+
+    @media (max-width: 991.98px) {
+
+      .play-btn{
+        height:60px !important;
+        width:60px !important;
+        position:fixed !important;
+        right:5px;
+        z-index:111;
+        bottom:5px;
+        top:auto!important;
+        left:auto!important}
+        .reverse-order{
+          order:-1;
+        }
+        .home-card-image{
+          background-size:contain !important;
+          background-position:center center !important;
+        }
+        .play-btn:before{
+          display:none !important;
+        }
+      .back-to-top{
+        display: none !important;
+      }
+      }
+      .ftco-section-2 .section-2-blocks-wrapper .button {
+
+        top: auto;
+
+        bottom: 0 !important;
+
+        margin-right: auto;
+
+        right: auto;
+
+        left: 50%;
+
+
+        -webkit-transform: translateX(-50%);
+
+        -ms-transform: translateX(-50%);
+
+        transform: translateX(-50%); } }
+
+    .ftco-section-2 .section-2-blocks-wrapper .button span {
+
+      position: absolute;
+
+      font-size: 30px;
+      bottom: 0 !important;
+
+
+      color: #fff;
+
+      top: 50%;
+
+      left: 50%;
+
+      -webkit-transform: translate(-30%, -48%);
+
+      -ms-transform: translate(-30%, -48%);
+
+      transform: translate(-30%, -48%); }
+
+  
+
+/*======================================
+//--//-->   Main page Cards
+======================================*/
+.cardsection{
+  list-style: none;
+
+} 
+
+
+
+  .ftco-section-2 .section-2-blocks-wrapper .text {
+
+    position: relative;
+
+    z-index: -1;
+
+    padding: 30px; }
+
+    @media (min-width: 768px) {
+
+      .ftco-section-2 .section-2-blocks-wrapper .text {
+
+        padding: 2% 7%;
+
+
+         }
+        } 
+         @media(min-width:890px){
+          .ftco-section-2 .section-2-blocks-wrapper .text {
+
+            padding: 3% 7%;
+    
+    
+             } 
+         }
+         @media(min-width:990px){
+          .ftco-section-2 .section-2-blocks-wrapper .text {
+
+            padding: 4% 7%;
+    
+    
+             } 
+         }
+         @media(min-width:1190px){
+          .ftco-section-2 .section-2-blocks-wrapper .text {
+
+            padding: 4% 7%;
+    
+    
+             } 
+         }
+         @media(min-width:1290px){
+          .ftco-section-2 .section-2-blocks-wrapper .text {
+
+            padding: 4% 7%;
+    
+    
+             } 
+         }
+         @media(min-width:1390px){
+          .ftco-section-2 .section-2-blocks-wrapper .text {
+
+            padding: 6% 7%;
+    
+    
+             } 
+         }
+         @media(min-width:1590px){
+          .ftco-section-2 .section-2-blocks-wrapper .text {
+
+            padding: 8% 7%;
+    
+    
+             } 
+         }
+         @media(min-width:1690px){
+          .ftco-section-2 .section-2-blocks-wrapper .text {
+
+            padding: 9% 7%;
+    
+    
+             } 
+         }
+         @media(min-width:1790px){
+          .ftco-section-2 .section-2-blocks-wrapper .text {
+
+            padding: 10% 7%;
+    
+    
+             } 
+         }
+         
+
+    .ftco-section-2 .section-2-blocks-wrapper .text h3 {
+
+     }
+@media(min-width:991.98){
+  .ftco-section-2 .section-2-blocks-wrapper .img {
+
+    height: auto !important; }
+}
+  
+
+  .ftco-section-2 .section-2-blocks-wrapper .img {
+
+    display: block;
+
+    background-position: center center;
+
+    background-size: cover; }
+
+    @media (max-width: 991.98px) {
+
+      .ftco-section-2 .section-2-blocks-wrapper .img {
+
+        height: 200px; } }
+
+
+
+/* partner logos */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+        
+/* youtube iframe */
+
+@media only screen and (max-width: 900px) {
+  .responsive{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+  }
+  .responsive iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+
+
+/* CardSection Spacing Mobile */
+@media (max-width: 575px) {
+
+  .cardsection{
+    list-style: none;
+    padding: 0px;
+  } 
+}
+
+
+
+/* fonts */
+.parag1,.parag2,.parag3{
+  font-family: "Poppins";
+  font-size: 32px ;
+
+
+padding-bottom: 15px;
+}
+
+
+
+
+
+#readMore2{
+  background-position:80% center;
+}
+#readMore1{
+  background-position:70% center;
+}

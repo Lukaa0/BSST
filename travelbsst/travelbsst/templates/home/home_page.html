@@ -1,0 +1,882 @@
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>BSST</title>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="" name="keywords">
+
+  <meta content="" name="description">
+
+
+
+  <!-- Favicons -->
+
+  <link href="{% static 'img/logo.jpg' %}" rel="icon">
+
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+
+  <!-- Google Fonts -->
+
+  <link href="{% static 'css/poppinsfont.css' %} "rel="stylesheet">
+
+
+  <!-- Bootstrap CSS File -->
+
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+
+  <!-- Libraries CSS Files -->
+
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+
+ 
+
+  <link href="{% static 'css/home.css' %}" rel="stylesheet">
+  <link href="{% static 'css/cookies.css' %}" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+ 
+ 
+</head>
+
+
+
+<body>
+
+  <!--/ Nav Star /-->
+
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+
+    <div class="container" >
+
+      <button class="navbar-toggler  burger-bar collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+      <!-- Main Logo -->
+<a href="/">
+  <div class="modal_logo modal-logo-main" style=" background-image: url(static/img/logo.jpg); background-size:cover;  margin-top:7px;" > </div>
+      
+    </a>
+      <a class="navbar-brand text-brand" href="/" style="font-size:15px; text-align: center; color: #00635e" > The Black Sea Sustainable<span class="color-b" > <br>  Rural Tourism Program  </span> 
+
+      
+
+      </a>
+<style>
+ 
+.heading-color {
+  color: {{self.headings_font_color}};
+}
+.parag1,.parag2,.parag3{
+  font-family: "{{self.headings_font_family}}";
+  font-size: {{self.headings_font_size}} ;
+
+
+padding-bottom: 15px;
+}
+body {
+  font-family: 'Poppins';
+  color: {{self.paragraphs_font_color}};
+}
+
+
+.pr1,.pr2,.pr3{
+  
+  font-family: "{{self.paragraphs_font_family}}";
+  font-size: {{self.paragraphs_font_size}} ;
+ 
+}
+
+</style>
+     
+
+
+        <a class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none custom-dbox-popup">
+          <i class="fas fa-seedling" href style="color:#00635e; font-size:1.5rem;"aria-hidden="true"></i>
+
+
+        </a>
+
+
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+
+        <!-- Navbar Elements  -->
+
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+
+            <a class="nav-link active" href="/">Home</a>
+
+          
+
+          </li>
+
+          <li class="nav-item">
+
+            
+
+            <div class="dropdown">
+
+                <span id="communitieshover" class="nav-link">Where to </span>
+
+               <div class="dropdown-content">
+
+               <a href="{{self.georgia_page.url}}" class="fa fa-map-marker" id="country_link_main_ge" > <span class="font-family-poppins heading-color">Georgia</span></a>
+
+
+                <a  href="{{self.turkey_page.url}}" class="fa fa-map-marker" id="country_link_main_tur"> <span class="font-family-poppins heading-color">Turkey</span></a>
+
+                
+                <a  href="{{self.ukraine_page.url}}" class="fa fa-map-marker" id="country_link_main_ukr" > <span class="font-family-poppins heading-color">Ukraine</span></a>
+                
+            
+ <!-- Add country links to localstorage -->
+ <script>
+  var link_ge = localStorage.setItem("link_ge",document.getElementById("country_link_main_ge").getAttribute("href"));
+  
+  var link_ukr = localStorage.setItem("link_ukr",document.getElementById("country_link_main_ukr").getAttribute("href"));
+  
+  var link_tur = localStorage.setItem("link_tur",document.getElementById("country_link_main_tur").getAttribute("href"));
+  
+</script>
+
+            
+
+                </div>
+
+                </div>
+
+              
+
+            
+
+          </li>
+         
+
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="/aboutus">About us</a>
+
+          </li>
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="/contactus">Contact us</a>
+
+          </li>
+          
+            
+          <li class="nav-item">
+
+            <a class="nav-link cursor-pointer" data-toggle="modal" data-target="#joinModal">Join us</a>
+
+          </li>
+        </li>
+
+
+        </ul>
+      </div>
+
+
+
+      <a class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block custom-dbox-popup"
+       href="https://donorbox.org/the-black-sea-community-fund"  style="border-radius:4px;"> Support Community
+    </a>
+
+    </div>
+<style>
+
+input[type="text"], input[type="email"]{
+  margin:0;
+}
+
+</style>
+  </nav>
+ {% include "joinUs/joinUs.html" %}    
+
+    
+  <!--/ Nav End /-->
+
+
+  <div id="cookie-banner" class="cookie-banner cookie-banner--hide">
+    <span>We use cookies to personalise content, provide social media features, and analyse traffic. To disable cookies, this can be configured via the web browser. However this can limit your experience with our website.</span>
+    <br> <span id="cookie-banner-button" class="cookie-banner-button">Accept Cookies</span> <a class="cookie-banner-button" href="/termsofuse">Learn More</a>
+  </div>
+
+  <!--/ Slidebar /-->
+
+  <div class="intro intro-carousel"  style="margin-top:6.8%; "  >
+
+      <div id="carousel" class="owl-carousel owl-theme" >
+  
+  {% image self.banner_image1 fill-2800x1600 as img1%}
+        <div class="carousel-item-a intro-item bg-image" class="sliderimg" style="background-image: url('{{img1.url}}'); ">
+  
+          <div class="overlay overlay-a"></div>
+  
+          <div class="intro-content display-table">
+  
+            <div class="table-cell">
+  
+              <div class="container">
+  
+                <div class="row">
+  
+                  <div class="col-lg-8">
+  
+                    <div class="intro-body">
+  
+                      <h2 class="slide-1-info" style="color:white;">
+  
+                        <br> <span class="color-o"> {{self.image1_colored_text_line1}}</span>{{self.image1_text_line1}} <br>
+  
+                         &nbsp; <span class="color-o"> {{self.image1_colored_text_line2}}</span>{{self.image1_text_line2}} <br>
+  
+                        
+  
+                        
+  
+                      </h2>
+  
+                      <p class="intro-subtitle intro-price">
+  
+                        <a  href="#modal_map" data-toggle="modal" data-target="#myModal"><span class="join_us_1_slide"> <span class="fa fa-map-marker"> </span> Where to
+  
+                            ?</span></a>
+  
+                      </p>
+  
+                    </div>
+  
+                  </div>
+  
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+  {% image self.banner_image2 fill-2800x1600 as img2%}
+        <div class="carousel-item-a intro-item bg-image" class="sliderimg" style="background-image: url('{{img2.url}}');  background-repeat:no-repeat;
+    
+        ">
+  
+          <div class="overlay overlay-a"></div>
+  
+          <div class="intro-content display-table">
+  
+            <div class="table-cell">
+  
+              <div class="container">
+  
+                <div class="row">
+  
+                  <div class="col-lg-8">
+  
+                    <div class="intro-body">
+  
+                      <h2 style="color:white;">
+  
+  
+                        <br> <span class="color-o"> {{self.image2_colored_text_line1}}</span>{{self.image2_text_line1}} <br>
+  
+                         &nbsp; <span class="color-o"> {{self.image2_colored_text_line2}}</span>{{self.image2_text_line2}} <br>
+  
+  
+  
+                      </h2>
+  
+                      <p class="intro-subtitle intro-price">
+  
+                        <a  href="#modal_map" data-toggle="modal" data-target="#myModal" ><span class="join_us_1_slide" > <span class="fa fa-map-marker"> </span> Where to
+  
+                            ?</span></a>
+  
+                      </p>
+  
+                    </div>
+  
+                  </div>
+   
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+  {% image self.banner_image3 fill-1489x798 as img3%}
+        <div class="carousel-item-a intro-item bg-image" style="background-image: url('{{img3.url}}'); 
+       
+        
+        "> 
+  
+          <div class="overlay overlay-a"></div>
+  
+          <div class="intro-content display-table">
+  
+            <div class="table-cell">
+  
+              <div class="container">
+  
+                <div class="row">
+  
+                  <div class="col-lg-8">
+  
+                    <div class="intro-body">
+  
+                      <h2 style="color:white;">
+  
+  
+                        <br> <span class="color-o"> {{self.image3_colored_text_line1}}</span>{{self.image3_text_line1}} <br>
+  
+                         &nbsp; <span class="color-o"> {{self.image3_colored_text_line2}}</span>{{self.image3_text_line2}} <br>
+    
+                        <p class="intro-subtitle intro-price">
+  
+                          <a  href="#modal_map" data-toggle="modal" data-target="#myModal"><span class="join_us_1_slide" href="#modal"  > <span class="fa fa-map-marker"> </span> Where to
+  
+                              ?</span></a>
+  
+                        </p>
+  
+                    </div>
+  
+                  </div>
+  
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+    <!--/ Carousel end /-->
+  
+  
+     <!-- Map Popup Start-->
+  
+       <!-- Map Popup End-->
+
+     <!--Wrapper start-->
+
+     <div id="wrapper">
+
+
+      <!--List of cards-->
+ <ul class="cardsection">  
+
+   <!--Card1 start-->
+  <li >
+      <section class="ftco-section-2 card-1">
+          <div class="container-fluid" style="margin-top:auto;">
+            <div class="section-2-blocks-wrapper row no-gutters">
+
+  {% image self.video_image max-2320x2200 as bridgeComImg%}
+              <div class="lazy img col-sm-12 col-lg-6 home-card-image" id="readMore1" style=" background-image: url('{{bridgeComImg.url}}'); background-size: cover; background-repeat: no-repeat;">
+  
+                <!--Video Popup Trigger-->
+                <a class="play-btn"  data-toggle="modal" data-target="#modal"  id="videoLink" class="button popup-vimeo" style="cursor:pointer; "onclick="playVid()"></a>  
+     
+        
+                
+              </div>
+              <div class="text col-lg-6 card-text  play-btn-text ftco-animate" style="z-index:0 !important;">
+                <div class="text-inner align-self-start">
+                  <h2 class="heading-color card-text parag1 text-center" >{{self.main_title}}
+                  </h2>
+      
+                  <p class="pr1">{{self.main_text}}<span id="dots1">...</span>
+                  <button style="z-index:-1; background:none; border:0; color:orange; padding:0;" type="button" onclick="readMore1()" class="btn btn-primary rm" id="read-more-btn1"  >Read more</button><p class="pr1" id="more1" style="display:none" >{{self.additional_text}}
+                     </p>
+              </p>
+  
+              <button style="z-index:1; display:none; cursor:pointer; background:none; border:0; padding:0; color:orange" type="button" onclick="readMore1()"  id="read-less-btn1" class="rl">Read less</button>
+             
+  
+  
+  
+  
+              
+                </div>
+              </div>
+            </div>
+          </div>
+  
+          
+        </section>
+  </li>
+
+  <!--Card1 end-->
+
+ 
+ 
+{% for block in page.content %}
+    {% include_block block %}
+{% endfor %}
+
+
+ <!--CardSection End-->
+
+ <!--Video Popup Start, the popup trigger is placed above -->
+
+
+ <div class="modal"   id="modal">
+
+  <div class="modal__dialog" style="width:100vw;height:90vh">
+
+    <section class="modal__content" style="height:50vh">
+
+      <header class="modal__header">
+
+       
+
+         <div class="modal_logo " style="background-image: url(static/img/logo.jpg);" >  </div>  
+         
+         <h5 class="modal__title"> BSST bridging rural communities </h5>
+
+
+
+        <a><button onclick="pauseVid()"class="modal__close" id="modal__close" 
+
+         >
+
+           <span  class="fa fa-times-circle" aria-hidden="true" style="color:black;" ></span>
+
+        </button> </a>
+
+      </header>
+
+<div class="modal__body">
+
+<iframe class="youtube-video" width="100%" style="height:50vh" 
+  src="" >
+  </iframe>
+
+  
+
+</div>
+
+</section>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="text col-lg-6 ftco-animate" style="background-size: 100%">
+
+<div class="text-inner align-self-start">
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+  
+<div class=" text-center" style="margin-bottom:25px;">
+  <div class="dropdown show where-to-container">
+      <a class="btn btn-secondary btn-lg dropdown-toggle where-to-mob " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Where to?
+      </a>
+    
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item" href="{{self.georgia_page.url}}">Georgia</a>
+        <a class="dropdown-item" href="{{self.ukraine_page.url}}"> Ukraine </a>
+        <a class="dropdown-item"  href="{{self.turkey_page.url}}">Turkey </a>
+          
+      </div>
+    </div>
+  </div>
+<!--Video Popup End-->
+
+
+<div style="text-align: center">
+    <h2 class=" text-center text-lg-left mt-3 mb-0" style="display: inline-block; font-weight:bold;"> <span class="heading-color"> {{self.partners_section_title}} </span> </h2>
+
+  </br> </br>
+  
+  <div class="partner-row text-center"  >
+  
+  
+{% for block in page.partners %}
+    {% include_block block %}
+{% endfor %}
+      
+  
+    </div>
+  
+</div>
+
+
+  
+
+</div>
+
+
+
+</div>
+
+
+<!--Wrapper ENd-->
+
+
+
+ <!--/ footer Star /-->
+ <section class="section-footer">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-sm-12 col-md-4">
+
+        <div class="widget-a">
+
+          <div class="w-header-a">
+
+            <h3 class="w-title-a heading-color">BSST</h3>
+
+          </div>
+
+          <div class="w-body-a">
+
+            <p class="w-text-a color-text-a" style="font-size:1rem">
+              BSST is a social venture of <a href="https://www.ruralsusdev.org/" > Sustainable Rural Development  </a> 
+              International Limited, a non-profit incorporated in England
+              And Wales, Registration Number 8148076
+              
+
+            </p>
+
+          </div>
+
+          <div class="w-footer-a">
+
+            <ul class="list-unstyled">
+
+              <li class="color-a">
+
+                <span class="color-text-a">Phone .</span> +44 207.549.3750</li>
+
+              <li class="color-a">
+
+                <span class="color-text-a">Email .</span> infosrdi@vesselkaconsult.com</li>
+                <li>
+
+                  <img class="cursor-pointer" src="{% static 'img/GSTCicon.jpg' %}" style="height:120px;width:120px;" onclick="location.href='https://www.gstcouncil.org/'">
+    
+                </li>
+               
+            </ul>
+            
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-12 col-md-4 section-md-t3">
+
+        <div class="widget-a">
+
+          <div class="w-header-a">
+
+            <h2 class="w-title-a heading-color">The BSST Social Venture </h2>
+
+          </div>
+
+          <div class="w-body-a">
+
+            <div class="w-body-a">
+
+              <ul class="list-unstyled">
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/aboutus">About</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/faq">FAQ</a>
+
+                </li>
+
+
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/termsandconditions"> General Terms and Conditions</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/termsofuse">Website Terms of Use</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/privacypolicy">Privacy Policy </a>
+
+                </li>
+                <li class="item-list-a">
+
+                    <i class="fa fa-angle-right"></i> <a data-toggle="modal" class="cursor-pointer" data-target="#joinModal">Join Us </a>
+  
+                  </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-12 col-md-4 section-md-t3">
+
+        <div class="widget-a">
+
+          <div class="w-header-a">
+
+            <h3 class="w-title-a heading-color">Our Communities</h3>
+
+          </div>
+
+          <div class="w-body-a">
+
+            <ul class="list-unstyled">
+
+              <li class="item-list-a">
+
+                <i class="fa fa-angle-right"></i> <a href="/georgia" class="country_link_ge_footer">Georgia</a>
+
+              </li>
+
+              <li class="item-list-a">
+
+                <i class="fa fa-angle-right "></i> <a href="#" class="country_link_ukr_footer">Ukraine</a>
+
+              </li>
+
+              <li class="item-list-a">
+
+                <i class="fa fa-angle-right"></i> <a href="#" class="country_link_tur_footer">Turkey</a>
+
+              </li>
+             
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer style="width:100%;">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <nav class="nav-footer">
+
+          <ul class="list-inline" style="margin-top:15px;">
+              
+
+            <li class="list-inline-item">
+
+              <a href="/">Home</a>
+
+            </li>
+
+            <li class="list-inline-item">
+
+              <a href="contactus">Contact</a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <div class="socials-a">
+
+          <ul class="list-inline">
+
+            
+
+{% for block in page.social_media_links %}
+    {% include_block block %}
+{% endfor %}
+      
+
+          </ul>
+
+        </div>
+
+        <div class="copyright-footer">
+
+          <p class="copyright color-text-a">
+
+            &copy; Copyright
+
+            <span class="color-a">SRDI</span> All Rights Reserved.
+          </p>
+
+        </div>
+
+        <div class="credits">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+<!--/ Footer End /-->
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <div id="preloader"></div>
+
+
+
+  <!-- JavaScript Libraries -->
+ <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+
+
+
+
+  <script src="{% static 'lib/popper/popper.min.js' %}"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js'></script> 
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <script src="{% static 'lib/scrollreveal/scrollreveal.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script src="{% static 'js/slider.js' %}"></script>
+
+<script src="{% static 'js/donorbx.js' %}" type="text/javascript" defer></script>
+<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
+
+  <!-- Template Main Javascript File -->
+
+  <script src="{% static 'ss/main.js' %}"></script>
+  <script src="{% static 'js/navbar_links.js' %}"></script>
+  <script src="{% static 'js/cookies.js' %}"></script>
+
+
+  <script src="{% static 'js/jquery.lazy.js' %}"></script>
+ 
+  <script src="{% static 'js/closemodal.js' %}"></script>
+
+
+ <script>
+function playVid() { 
+  
+  $('.youtube-video').attr('src','https://www.youtube.com/embed/IQrknF32rF0?enablejsapi=1&version=3&playerapiid=ytplayer')
+    $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+  
+   } 
+  
+  
+  
+    $('#modal__close').click(function(){
+
+    $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+    });
+
+
+
+ </script>
+
+</body>
+
+
+
+</html>

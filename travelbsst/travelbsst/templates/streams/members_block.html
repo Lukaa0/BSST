@@ -1,0 +1,28 @@
+{% load wagtailcore_tags wagtailimages_tags%}
+
+<div class="col-md-4">
+    <div class="card-box-d card-box-com-rep card-column-diff" style="max-block-size: 350px;">
+    <div class="card-img-d">
+
+  {% image self.image max-1489x798 as img%}
+        <img src="{{img.url}}" alt="" class="img-d img-fluid community-rep-img">
+    </div>
+    <div class="card-overlay card-overlay-hover">
+        <div class="card-header-d"> 
+        <div class="card-title-d align-self-center">
+            <h3 class="title-d">
+            <span href="agent-single.html" class="link-two">{{self.name}}
+                <br>{{self.surname}}</span>
+            </h3>
+        </div>
+        </div>
+        <div class="card-body-d">
+        <p class="content-d color-white">
+        {{self.person_info}} 
+        
+        </div>
+        
+    </div>
+    </div>
+</div>
+<br>

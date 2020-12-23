@@ -1,0 +1,36 @@
+{% load wagtailcore_tags wagtailimages_tags%}
+
+
+  <li >  
+    
+      <section class="ftco-section-2">
+          <div class="container-fluid ">
+            <div class="section-2-blocks-wrapper row no-gutters">
+
+
+  {% image self.image fill-2800x1600 as img%}
+
+              <div data-src="{{ img.url }}" class="lazy img col-sm-12 col-lg-6 home-card-image"  id="readMore"style="background-size: cover; background-repeat: no-repeat;">
+    
+              </div>
+              <div class="text col-lg-6 card-text  ftco-animate" style="z-index:0 !important;">
+                <div class="text-inner align-self-start">
+        
+                  <h2 class="heading-color card-text parag3 text-center">{{self.header_text}}
+                  </h2>
+        
+                  <p class="pr1">{{self.main_text}}<span id="dots">...</span>
+                  <button style="z-index:1; background:none; cursor:pointer; border:0; color:orange; padding:0;" type="button" class="btn btn-primary rm" id="read-more-btn" >Read more</button><p class="pr1"id="more" style="display:none;"> {{self.additional_text}}
+                </span>
+              </p>
+        
+              <button style="z-index:1; cursor:pointer; display:none; background:none; border:0; padding:0; color:orange;" type="button"  class="rl" id="read-less-btn" >Read less</button>
+          
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </section>
+  
+  </li>

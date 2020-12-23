@@ -1,0 +1,1713 @@
+
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags%}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BSST</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.css'><link rel="stylesheet" href="{% static 'css/styleslider.css' %}">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/logo.jpg' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <!--Gallery Css-->
+    <link rel="stylesheet" href="{% static 'css/grid-gallery.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/master.min.css' %}">
+ 
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+  <link href="{% static 'css/bookingvalidation.css' %}" rel="stylesheet">
+  <link href="{% static 'css/snackbar.css' %}" rel="stylesheet">
+   
+
+
+
+  <link href="{% static 'css/home.css' %}" rel="stylesheet">
+<link href="{% static 'css/accomodation_style.css' %}" rel="stylesheet">
+  <script src="{% static 'js/jquery-3.4.0.min.js' %}"></script>
+  
+</head>
+
+<body style="font-size:18px !important">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/brands.css"
+    integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css"
+    integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  <!--     
+    <a href="#" class="float">
+    <i class="fab fa-facebook-messenger floating-button fa-2x"></i>
+    </a> -->
+  
+<div class="accom-com-name" id="{{self.community_name}}"> </div>
+
+   <!--/ Nav Star /-->
+ <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+  <div class="container " >
+    <button class="navbar-toggler  burger-bar collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+      aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <!-- Main Logo -->
+    <a href="/">
+      <div class="modal_logo modal-logo-main" style="background-image: url({% static 'img/logo.jpg' %}); background-size:cover;  margin-top:7px;" > </div>
+          
+        </a>
+          <a class="navbar-brand text-brand" href="/" style="font-size:15px; text-align: center; color: #00635e" > The Black Sea Sustainable<span class="color-b" > <br>  Rural Tourism Program  </span> 
+    
+          
+    
+          </a>
+   
+    <a class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none custom-dbox-popup">
+          <i class="fas fa-seedling" href style="color:#00635e; font-size:1.5rem;"aria-hidden="true"></i>
+
+
+        </a>
+
+    <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+      <!-- Navbar Elements  -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a  class="nav-link" href="/">Home</a>
+        
+        </li>
+        <li class="nav-item">
+          
+          <div class="dropdown">
+              <span id="communitieshover" class="nav-link active">Where to </span>
+             <div class="dropdown-content">
+                <a href="/georgia" class="fa fa-map-marker country_link_ge" > <span class="font-family-poppins heading-color">Georgia</span></a>
+
+                <a  href="#" class="fa fa-map-marker country_link_tur" > <span class="font-family-poppins heading-color">Turkey</span></a>
+
+                <a  href="#" class="fa fa-map-marker country_link_ukr" > <span class="font-family-poppins heading-color">Ukraine</span></a>
+
+              </div>
+              </div>
+            
+          
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/aboutus">About us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contactus">Contact us</a>
+        </li>
+        </li>
+        
+      </ul>
+    </div>
+    <!-- Registration Button -->
+     <a class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block custom-dbox-popup"
+       href="https://donorbox.org/the-black-sea-community-fund"  style="border-radius:4px;"> Support Community
+    </a>
+  </div>
+</nav>
+<!--/ Nav End /-->
+ <join-us></join-us>
+
+
+  <!--/ Intro Single star /-->
+  
+  
+
+  <section class="intro-single">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-8">
+            <div class="title-single-box">
+              <h1 class="title-d"> <span class="heading-color new-heading"> {{self.images_section_title}} </span></h1>
+              <span class="color-text-a new-text"> {{self.images_section_subtitle}}</span>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4">
+
+          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+
+            <ol class="breadcrumb">
+
+              <li class="breadcrumb-item">
+
+                <a href="{{self.community_page.url}}">{{self.community_name}}</a>
+                
+              </li>
+    
+              <li class="breadcrumb-item active" aria-current="page">
+
+                {{self.images_section_title}}
+
+              </li>
+
+            </ol>
+
+          </nav>
+
+        </div>
+        </div>
+      </div>
+
+        <!--/ Slider Start /-->
+
+    <div class="container">
+    <div class="row">
+
+      <div class="col-md-12 heroSlider-fixed">
+        <div class="overlay">
+      </div>
+         <!-- Slider -->
+          <div class="popup-gallery">
+
+        <div class="slider responsive" >
+
+                  {% for block in page.images %}
+                      {% include_block block %}
+                  {% endfor %}
+        </div>
+				 <!-- control arrows -->
+
+				<div class="prev">
+					<span class="fa fa-chevron-circle-left"  aria-hidden="true" >   </span>
+				</div>
+				<div class="next">
+					<span class="fa fa-chevron-circle-right" aria-hidden="true"  >   </span>
+				</div>
+
+</div>
+
+      </div>
+    </div>
+  </div>
+
+  <!--/ Slider End /-->
+    </section>
+
+    
+  <!--/ Intro Single End /-->
+
+
+
+
+
+  <!--/ Property Single Star /-->
+  <section class="property-single nav-arrow-b">
+
+    <div class="container property-container">
+
+
+<!-- Booking Desktop start -->
+
+ {% comment %} allow/disable multitype rooms {% endcomment %}
+ {% if self.room_types_available %}
+<div id="multitype" class="multitype"> </div>
+{%else %}
+<div id="multitype" > </div>
+
+{% endif %}
+
+
+
+ {% comment %} accomodation pricing  {% endcomment %}
+              <ul class="pricing-list" style="display:none;"> 
+            
+               <select class="form-control-range"  id="pricesell"  style="width:auto; max-width:300px;">
+               
+                  {% for block in page.room_option_prices %}
+                      {% include_block block %}
+                  {% endfor %}
+                  
+                </select>
+
+                <li id= "breakfast_price">{{self.breakfast_price}} </li>
+                <li id= "tour_price"> {{self.tour_price}} </li>
+                <li id= "administration_fee"> {{self.administration_fee}} </li>
+                <li id= "community_fund"> {{self.community_fund}} </li>
+                <li id= "community_fund"> {{self.community_fund}} </li>
+                <li id= "flat_fees"> {{self.flat_fees}}  </li>
+                <li id= "per_person_charges"> {{self.per_person_charges}} </li>
+                <li id= "administration_charge"> {{self.administration_charge}} </li>
+              
+              
+              </ul>
+ {% comment %} accomodation pricing  {% endcomment %}
+ 
+ {% comment %} activities empty message  {% endcomment %}
+
+  <div id="emptyactivities" style= "display:none;"> No activities selected <br> <a href=" {{self.community_page.url}}#additionalactivities" id ="scroller"  class=" color-o"> <u> select and stay longer </u> </a> </div>
+
+   {% comment %} activities empty message  {% endcomment %}
+
+
+<!-- Modal -->
+
+
+
+
+    <div class="sticky-top sticky-offset" style=" top:200px;
+        float:right; " >
+
+    <div class="modal-content" id="modal_content_desktop "  style="max-width:376px;" >
+
+      <div class="modal-body" style="padding:0.9rem !important;">
+
+           <div class="modal-header heading-color"  style="text-align:center;">
+        <h5 class="modal-title">{{self.booking_form_title}}</h5>
+        
+    </div>
+    
+
+    
+
+
+
+        <div class="form-row">
+
+
+
+              </div>
+              <div class="">
+
+                  <div class="form-group col-md-15">
+
+                      <label for="formGroupExampleInput2">Arrival date</label>
+                      <div> <label id="errorlabel" style="display:none;">  </label>
+                      <input type="date" class="firstdate" id="pick_date" required="required"  style="width:100%;">
+                      </div>
+                      <div class="input-group date" data-provide="datepicker" >
+                      
+
+                    </div>
+
+
+                <div class="form-group col-md-15">
+                  <label for="formGroupExampleInput2">Departure date</label>
+
+                  <input type="date" class="seconddate" id="drop_date" required="required" style="width:100%;">
+
+
+                </div>
+
+                   <div class="form-group  col-md-15" style="display:flex; justify-content:space-between;">
+                <label for="sel1">Number of guests</label>
+                <select class="form-control-range"  id="sel1"  style="width:auto;">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                </select>
+              </div>
+             
+
+              <div class="form-group  col-md-15" style="display:flex; flex-direction:column; justify-content:center;" >
+                <label for="sel2">Available accomodation types: </label> 
+              
+                <select class="form-control-range"  id="sel2"  style="max-width:100%; ">
+                  
+                  {% for block in page.room_options %}
+                      {% include_block block %}
+                  {% endfor %}
+                  
+                </select>
+              </div>
+              <label class="form-check-label" for="gridCheck">
+
+              </label>
+              </div>
+
+               
+            <style>
+            textarea{
+              width:100%;
+             resize:none;
+            }
+            </style>
+            <div id="numdays" style="display:flex; flex-direction:column">
+
+
+    <div id="breakdown-boxes" style="display:none;">
+    <div class="breakdown-box-desktop">
+
+      <label class="form" id="accomodation-price"style="margin-bottom: 10px">Accomodation and breakfasts:   </label>
+      <label class="form" id="accomodation-value-label"style="margin-bottom: 10px"></label>
+</div>
+<div class="breakdown-box-desktop">
+
+      <label class="form" id="tour-price"style="margin-bottom: 10px">Tour:   </label>
+      <label class="form" id="tour-value-label"style="margin-bottom: 10px"></label>
+</div>
+<div class="breakdown-box-desktop">
+
+      <label class="form" id="admin-price"style="margin-bottom: 10px">Administration fee:   </label>
+      <label class="form" id="admin-value-label"style="margin-bottom: 10px"></label>
+</div>
+<div class="breakdown-box-desktop">
+
+      <label class="form" id="community-price"style="margin-bottom: 10px">Community fund:   </label>
+      <label class="form" id="community-value-label"style="margin-bottom: 10px"></label>
+</div>
+
+<div class="breakdown-box-desktop" >
+      <label class="form" id="total-price"style="margin-bottom: 10px">Total price:   </label>
+      <label class="form" id="total-value-label"style="margin-bottom: 10px"></label>
+    </div>
+
+    {% comment %} <div class="modal-header heading-color"  style="text-align:center;">
+        <h5 class="modal-title">Pay on arrival</h5>
+    </div> {% endcomment %}
+    <div class="breakdown-box-desktop" >
+      
+      <div style="display:flex; justify-content:space-between;" > 
+      <label class="form" id="activity-price"style="margin-bottom: 10px" >Activities:    </label>
+       
+
+      <label class="form" id="activity-value-label"style="margin-bottom: 10px" > </label>
+
+      </div>
+   </div>
+        </div>
+       </div>
+
+    </div> 
+          
+            <div style="display:flex; justify-content:space-around;"   >
+
+
+                <button type="submit" id="req-to-book" class="btn btn-success " style="width:100%;"  > Request to book  </button>
+            
+            </div>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+        </div>
+
+        
+ <!-- Booking Desktop end -->
+    <!-- Booking popup start -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" >
+
+      <div class="modal-header">
+       
+        <h5 class="modal-title" id="exampleModalLongTitle_mobile" >Just a few steps...</h5>
+        <button type="button" class="close" id="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+     
+      <div class="modal-body">
+      <h5 class="heading-color">All fields are required</h5>
+        <form method="post" action="{% url 'sendEmail' %}" id="sendemailform" >
+               	{% csrf_token %}
+
+          <div class="form-row">
+            <div class="form-group col">
+                <div class="name inputWithIcon" >
+                  <input type="text" class="form-control" placeholder="First name" name = "firstName" required id="name">
+                  <i class="fa fa-user fa-lg fa-fw inputicon" id="inputicon_name" aria-hidden="true"></i>
+                 
+                </div>
+            </div>
+
+            <div class="form-group col">
+                <div class="surname inputWithIcon" id="iconf" >
+                
+                  <input type="text" class="form-control " placeholder="Last name" name="surname" required id="surname" >
+                  <i class="fa fa-user fa-lg fa-fw inputicon" id="inputicon_surname" aria-hidden="true"></i>
+                </div>
+              </div>
+          </div>
+          <div class="form-group ">
+            <div class="name inputWithIcon" >
+              <input type="text" class="form-control" placeholder="Email" name = "email" required id="email">
+              <i class="fas fa-envelope inputicon" id="inputicon_email" aria-hidden="true"></i>
+            </div>
+        </div>
+<script>
+  //validate
+//name
+$('#name').on('keyup', function() {
+    var input = $("#name");
+    if(input.val().length === 0 ||input.val().length < 2 ) {
+      $("#inputicon_name").removeClass();
+      $("#inputicon_name").addClass("fas"); 
+      $("#inputicon_name").addClass("fa-times-circle"); 
+      $("#inputicon_name").addClass("invalid"); 
+      document.getElementById("inputicon_name").style.color = "#ec7e24";
+    } else {
+        $("#inputicon_name").removeClass();
+        $("#inputicon_name").addClass("fas");
+        $("#inputicon_name").addClass("fas");
+        $("#inputicon_name").addClass("fas"); 
+        $("#inputicon_name").addClass("fa-check-circle"); 
+        $("#inputicon_name").addClass("valid"); 
+        document.getElementById("inputicon_name").style.color = "#00635e";
+
+        
+    }
+});
+
+
+
+  //surname
+  $('#surname').on('keyup', function() {
+    var input = $("#surname");
+    if(input.val().length === 0 ||input.val().length < 2 ) {
+      $("#inputicon_surname").removeClass();
+      $("#inputicon_surname").addClass("fas"); 
+      $("#inputicon_surname").addClass("fa-times-circle"); 
+      $("#inputicon_surname").addClass("invalid"); 
+      document.getElementById("inputicon_surname").style.color = "#ec7e24";
+    } else {
+        $("#inputicon_surname").removeClass();
+        $("#inputicon_surname").addClass("fas");
+        $("#inputicon_surname").addClass("fas");
+        $("#inputicon_surname").addClass("fas"); 
+        $("#inputicon_surname").addClass("fa-check-circle"); 
+        $("#inputicon_surname").addClass("valid"); 
+        document.getElementById("inputicon_surname").style.color = "#00635e";
+
+        
+    }
+});
+
+
+  //phonenumber
+  $('.mobilenum').on('keyup', function() {
+    console.log("hello");
+    var input = $("#phonenumber");
+    if(input.val().length === 0 ||input.val().length < 2 ) {
+      $("#inputicon_phonenumber").removeClass();
+      $("#inputicon_phonenumber").addClass("fas"); 
+      $("#inputicon_phonenumber").addClass("fa-times-circle"); 
+      $("#inputicon_phonenumber").addClass("invalid"); 
+      document.getElementById("inputicon_surname").style.color = "#ec7e24";
+      
+    } else {
+        $("#inputicon_phonenumber").removeClass();
+        $("#inputicon_phonenumber").addClass("fas");
+        $("#inputicon_phonenumber").addClass("fas");
+        $("#inputicon_phonenumber").addClass("fas"); 
+        $("#inputicon_phonenumber").addClass("fa-check-circle"); 
+        $("#inputicon_phonenumber").addClass("valid"); 
+        document.getElementById("inputicon_phonenumber").style.color = "#00635e";
+        
+    }
+});
+
+
+//Email
+$('#email').on('keyup', function() {
+
+    var input = $("#email");
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    if(re.test(String(input.val()).toLowerCase()) == false) {
+      $("#inputicon_email").removeClass();
+      $("#inputicon_email").addClass("fas"); 
+      $("#inputicon_email").addClass("fa-times-circle"); 
+      $("#inputicon_email").addClass("invalid"); 
+      document.getElementById("inputicon_email").style.color = "#ec7e24";
+    } else {
+        $("#inputicon_email").removeClass();
+        $("#inputicon_email").addClass("fas");
+        $("#inputicon_email").addClass("fas");
+        $("#inputicon_email").addClass("fas"); 
+        $("#inputicon_email").addClass("fa-check-circle"); 
+        $("#inputicon_email").addClass("valid"); 
+        document.getElementById("inputicon_email").style.color = "#00635e";
+    }
+});
+
+
+
+
+
+ function iconify(){
+  document.getElementById("inputicon_country").style.color = "#ec7e24";
+  
+  
+ }
+
+ function iconify1(){
+  document.getElementById("inputicon_countrycode").style.color = "#ec7e24";
+ }
+ 
+ function disiconify1(){
+ document.getElementsByClassName("countryselect").style.color ="auto";
+  
+ }
+ function disiconify(){
+  document.getElementById("inputicon_country").style.color = "auto";
+ }
+ 
+  
+
+</script>
+        <div class="form-group ">
+
+
+      </div>
+      <div class="form-group inputWithIcon">
+
+        <i class="fas fa-flag selectIcon" id="inputicon_country"  aria-hidden="true"></i>    
+          <div class="name"  >
+            
+<select style="border-radius: 4px;
+    margin: 5px;
+    display: block;
+    height: 50px;
+    width: 100%;
+    " id="country" name="country" class="countryselect" onfocus="iconify()" onfocusout="disiconify()">
+    
+    <option data-countryCode="GB" value="0" Selected>Choose your country</option>
+    
+    <option data-countryCode="GB" value="44" >UK</option>
+    <option data-countryCode="US" value="1">USA </option>
+    <optgroup label="Other countries">
+      <option data-countryCode="DZ" value="213">Algeria </option>
+      <option data-countryCode="AD" value="376">Andorra </option>
+      <option data-countryCode="AO" value="244">Angola </option>
+      <option data-countryCode="AI" value="1264">Anguilla</option>
+      <option data-countryCode="AG" value="1268">Antigua &amp; Barbuda </option>
+      <option data-countryCode="AR" value="54">Argentina</option>
+      <option data-countryCode="AM" value="374">Armenia </option>
+      <option data-countryCode="AW" value="297">Aruba </option>
+      <option data-countryCode="AU" value="61">Australia </option>
+      <option data-countryCode="AT" value="43">Austria </option>
+      <option data-countryCode="AZ" value="994">Azerbaijan </option>
+      <option data-countryCode="BS" value="1242">Bahamas </option>
+      <option data-countryCode="BH" value="973">Bahrain </option>
+      <option data-countryCode="BD" value="880">Bangladesh </option>
+      <option data-countryCode="BB" value="1246">Barbados </option>
+      <option data-countryCode="BY" value="375">Belarus </option>
+      <option data-countryCode="BE" value="32">Belgium </option>
+      <option data-countryCode="BZ" value="501">Belize </option>
+      <option data-countryCode="BJ" value="229">Benin </option>
+      <option data-countryCode="BM" value="1441">Bermuda </option>
+      <option data-countryCode="BT" value="975">Bhutan </option>
+      <option data-countryCode="BO" value="591">Bolivia </option>
+      <option data-countryCode="BA" value="387">Bosnia Herzegovina </option>
+      <option data-countryCode="BW" value="267">Botswana </option>
+      <option data-countryCode="BR" value="55">Brazil </option>
+      <option data-countryCode="BN" value="673">Brunei </option>
+      <option data-countryCode="BG" value="359">Bulgaria </option>
+      <option data-countryCode="BF" value="226">Burkina Faso </option>
+      <option data-countryCode="BI" value="257">Burundi </option>
+      <option data-countryCode="KH" value="855">Cambodia </option>
+      <option data-countryCode="CM" value="237">Cameroon </option>
+      <option data-countryCode="CA" value="1">Canada </option>
+      <option data-countryCode="CV" value="238">Cape Verde Islands </option>
+      <option data-countryCode="KY" value="1345">Cayman Islands </option>
+      <option data-countryCode="CF" value="236">Central African Republic </option>
+      <option data-countryCode="CL" value="56">Chile </option>
+      <option data-countryCode="CN" value="86">China </option>
+      <option data-countryCode="CO" value="57">Colombia </option>
+      <option data-countryCode="KM" value="269">Comoros </option>
+      <option data-countryCode="CG" value="242">Congo </option>
+      <option data-countryCode="CK" value="682">Cook Islands </option>
+      <option data-countryCode="CR" value="506">Costa Rica </option>
+      <option data-countryCode="HR" value="385">Croatia </option>
+      <option data-countryCode="CU" value="53">Cuba </option>
+      <option data-countryCode="CY" value="90392">Cyprus North </option>
+      <option data-countryCode="CY" value="357">Cyprus South </option>
+      <option data-countryCode="CZ" value="42">Czech Republic </option>
+      <option data-countryCode="DK" value="45">Denmark </option>
+      <option data-countryCode="DJ" value="253">Djibouti </option>
+      <option data-countryCode="DM" value="1809">Dominica </option>
+      <option data-countryCode="DO" value="1809">Dominican Republic </option>
+      <option data-countryCode="EC" value="593">Ecuador </option>
+      <option data-countryCode="EG" value="20">Egypt </option>
+      <option data-countryCode="SV" value="503">El Salvador </option>
+      <option data-countryCode="GQ" value="240">Equatorial Guinea </option>
+      <option data-countryCode="ER" value="291">Eritrea </option>
+      <option data-countryCode="EE" value="372">Estonia </option>
+      <option data-countryCode="ET" value="251">Ethiopia </option>
+      <option data-countryCode="FK" value="500">Falkland Islands </option>
+      <option data-countryCode="FO" value="298">Faroe Islands </option>
+      <option data-countryCode="FJ" value="679">Fiji </option>
+      <option data-countryCode="FI" value="358">Finland </option>
+      <option data-countryCode="FR" value="33">France </option>
+      <option data-countryCode="GF" value="594">French Guiana </option>
+      <option data-countryCode="PF" value="689">French Polynesia </option>
+      <option data-countryCode="GA" value="241">Gabon </option>
+      <option data-countryCode="GM" value="220">Gambia </option>
+      <option data-countryCode="GE" value="7880">Georgia </option>
+      <option data-countryCode="DE" value="49">Germany </option>
+      <option data-countryCode="GH" value="233">Ghana </option>
+      <option data-countryCode="GI" value="350">Gibraltar </option>
+      <option data-countryCode="GR" value="30">Greece </option>
+      <option data-countryCode="GL" value="299">Greenland </option>
+      <option data-countryCode="GD" value="1473">Grenada </option>
+      <option data-countryCode="GP" value="590">Guadeloupe </option>
+      <option data-countryCode="GU" value="671">Guam </option>
+      <option data-countryCode="GT" value="502">Guatemala </option>
+      <option data-countryCode="GN" value="224">Guinea </option>
+      <option data-countryCode="GW" value="245">Guinea - Bissau </option>
+      <option data-countryCode="GY" value="592">Guyana </option>
+      <option data-countryCode="HT" value="509">Haiti </option>
+      <option data-countryCode="HN" value="504">Honduras </option>
+      <option data-countryCode="HK" value="852">Hong Kong </option>
+      <option data-countryCode="HU" value="36">Hungary </option>
+      <option data-countryCode="IS" value="354">Iceland </option>
+      <option data-countryCode="IN" value="91">India </option>
+      <option data-countryCode="ID" value="62">Indonesia </option>
+      <option data-countryCode="IR" value="98">Iran </option>
+      <option data-countryCode="IQ" value="964">Iraq </option>
+      <option data-countryCode="IE" value="353">Ireland </option>
+      <option data-countryCode="IL" value="972">Israel </option>
+      <option data-countryCode="IT" value="39">Italy </option>
+      <option data-countryCode="JM" value="1876">Jamaica </option>
+      <option data-countryCode="JP" value="81">Japan </option>
+      <option data-countryCode="JO" value="962">Jordan </option>
+      <option data-countryCode="KZ" value="7">Kazakhstan </option>
+      <option data-countryCode="KE" value="254">Kenya </option>
+      <option data-countryCode="KI" value="686">Kiribati </option>
+      <option data-countryCode="KP" value="850">Korea North </option>
+      <option data-countryCode="KR" value="82">Korea South</option>
+      <option data-countryCode="KW" value="965">Kuwait </option>
+      <option data-countryCode="KG" value="996">Kyrgyzstan </option>
+      <option data-countryCode="LA" value="856">Laos </option>
+      <option data-countryCode="LV" value="371">Latvia </option>
+      <option data-countryCode="LB" value="961">Lebanon </option>
+      <option data-countryCode="LS" value="266">Lesotho </option>
+      <option data-countryCode="LR" value="231">Liberia </option>
+      <option data-countryCode="LY" value="218">Libya </option>
+      <option data-countryCode="LI" value="417">Liechtenstein </option>
+      <option data-countryCode="LT" value="370">Lithuania </option>
+      <option data-countryCode="LU" value="352">Luxembourg </option>
+      <option data-countryCode="MO" value="853">Macao </option>
+      <option data-countryCode="MK" value="389">Macedonia </option>
+      <option data-countryCode="MG" value="261">Madagascar </option>
+      <option data-countryCode="MW" value="265">Malawi </option>
+      <option data-countryCode="MY" value="60">Malaysia </option>
+      <option data-countryCode="MV" value="960">Maldives </option>
+      <option data-countryCode="ML" value="223">Mali </option>
+      <option data-countryCode="MT" value="356">Malta </option>
+      <option data-countryCode="MH" value="692">Marshall Islands </option>
+      <option data-countryCode="MQ" value="596">Martinique </option>
+      <option data-countryCode="MR" value="222">Mauritania </option>
+      <option data-countryCode="YT" value="269">Mayotte </option>
+      <option data-countryCode="MX" value="52">Mexico </option>
+      <option data-countryCode="FM" value="691">Micronesia </option>
+      <option data-countryCode="MD" value="373">Moldova </option>
+      <option data-countryCode="MC" value="377">Monaco </option>
+      <option data-countryCode="MN" value="976">Mongolia </option>
+      <option data-countryCode="MS" value="1664">Montserrat </option>
+      <option data-countryCode="MA" value="212">Morocco </option>
+      <option data-countryCode="MZ" value="258">Mozambique </option>
+      <option data-countryCode="MN" value="95">Myanmar </option>
+      <option data-countryCode="NA" value="264">Namibia </option>
+      <option data-countryCode="NR" value="674">Nauru </option>
+      <option data-countryCode="NP" value="977">Nepal </option>
+      <option data-countryCode="NL" value="31">Netherlands </option>
+      <option data-countryCode="NC" value="687">New Caledonia </option>
+      <option data-countryCode="NZ" value="64">New Zealand </option>
+      <option data-countryCode="NI" value="505">Nicaragua </option>
+      <option data-countryCode="NE" value="227">Niger </option>
+      <option data-countryCode="NG" value="234">Nigeria </option>
+      <option data-countryCode="NU" value="683">Niue </option>
+      <option data-countryCode="NF" value="672">Norfolk Islands </option>
+      <option data-countryCode="NP" value="670">Northern Marianas </option>
+      <option data-countryCode="NO" value="47">Norway </option>
+      <option data-countryCode="OM" value="968">Oman </option>
+      <option data-countryCode="PW" value="680">Palau </option>
+      <option data-countryCode="PA" value="507">Panama </option>
+      <option data-countryCode="PG" value="675">Papua New Guinea </option>
+      <option data-countryCode="PY" value="595">Paraguay </option>
+      <option data-countryCode="PE" value="51">Peru </option>
+      <option data-countryCode="PH" value="63">Philippines </option>
+      <option data-countryCode="PL" value="48">Poland </option>
+      <option data-countryCode="PT" value="351">Portugal </option>
+      <option data-countryCode="PR" value="1787">Puerto Rico </option>
+      <option data-countryCode="QA" value="974">Qatar </option>
+      <option data-countryCode="RE" value="262">Reunion </option>
+      <option data-countryCode="RO" value="40">Romania </option>
+      <option data-countryCode="RU" value="7">Russia </option>
+      <option data-countryCode="RW" value="250">Rwanda </option>
+      <option data-countryCode="SM" value="378">San Marino </option>
+      <option data-countryCode="ST" value="239">Sao Tome &amp; Principe </option>
+      <option data-countryCode="SA" value="966">Saudi Arabia (</option>
+      <option data-countryCode="SN" value="221">Senegal </option>
+      <option data-countryCode="CS" value="381">Serbia </option>
+      <option data-countryCode="SC" value="248">Seychelles </option>
+      <option data-countryCode="SL" value="232">Sierra Leone </option>
+      <option data-countryCode="SG" value="65">Singapore </option>
+      <option data-countryCode="SK" value="421">Slovak Republic </option>
+      <option data-countryCode="SI" value="386">Slovenia </option>
+      <option data-countryCode="SB" value="677">Solomon Islands </option>
+      <option data-countryCode="SO" value="252">Somalia )</option>
+      <option data-countryCode="ZA" value="27">South Africa </option>
+      <option data-countryCode="ES" value="34">Spain </option>
+      <option data-countryCode="LK" value="94">Sri Lanka </option>
+      <option data-countryCode="SH" value="290">St. Helena </option>
+      <option data-countryCode="KN" value="1869">St. Kitts </option>
+      <option data-countryCode="SC" value="1758">St. Lucia </option>
+      <option data-countryCode="SD" value="249">Sudan </option>
+      <option data-countryCode="SR" value="597">Suriname </option>
+      <option data-countryCode="SZ" value="268">Swaziland </option>
+      <option data-countryCode="SE" value="46">Sweden </option>
+      <option data-countryCode="CH" value="41">Switzerland </option>
+      <option data-countryCode="SI" value="963">Syria </option>
+      <option data-countryCode="TW" value="886">Taiwan </option>
+      <option data-countryCode="TJ" value="7">Tajikstan </option>
+      <option data-countryCode="TH" value="66">Thailand </option>
+      <option data-countryCode="TG" value="228">Togo </option>
+      <option data-countryCode="TO" value="676">Tonga </option>
+      <option data-countryCode="TT" value="1868">Trinidad &amp; Tobago </option>
+      <option data-countryCode="TN" value="216">Tunisia </option>
+      <option data-countryCode="TR" value="90">Turkey </option>
+      <option data-countryCode="TM" value="7">Turkmenistan </option>
+      <option data-countryCode="TM" value="993">Turkmenistan </option>
+      <option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands </option>
+      <option data-countryCode="TV" value="688">Tuvalu </option>
+      <option data-countryCode="UG" value="256">Uganda </option>
+      <!-- <option data-countryCode="GB" value="44">UK (+44)</option> -->
+      <option data-countryCode="UA" value="380">Ukraine </option>
+      <option data-countryCode="AE" value="971">United Arab Emirates </option>
+      <option data-countryCode="UY" value="598">Uruguay </option>
+      <!-- <option data-countryCode="US" value="1">USA (+1)</option> -->
+      <option data-countryCode="UZ" value="7">Uzbekistan </option>
+      <option data-countryCode="VU" value="678">Vanuatu </option>
+      <option data-countryCode="VA" value="379">Vatican City </option>
+      <option data-countryCode="VE" value="58">Venezuela </option>
+      <option data-countryCode="VN" value="84">Vietnam </option>
+      <option data-countryCode="VG" value="84">Virgin Islands - </option>
+      <option data-countryCode="VI" value="84">Virgin Islands - US </option>
+      <option data-countryCode="WF" value="681">Wallis &amp; Futuna </option>
+      <option data-countryCode="YE" value="969">Yemen (North)</option>
+      <option data-countryCode="YE" value="967">Yemen (South)</option>
+      <option data-countryCode="ZM" value="260">Zambia </option>
+      <option data-countryCode="ZW" value="263">Zimbabwe </option>
+    </optgroup>
+</select>
+
+</div>
+
+      </div>
+
+        <div class="form-row">
+          <div class="form-group  inputWithIcon">
+            <i class="fas fa-globe-europe selectIcon" id="inputicon_countrycode"   aria-hidden="true" style="margin-right: 10px; margin-top: 4px;"></i>    
+              <div class="name">
+<select style="border-radius: 4px;
+    margin: 5px;
+    display: block;
+    height: 50px;
+    width: 97%;
+    border: 1px solid #cccccc;" name="countryCode" id="countrycode" onfocus="iconify1()" onfocusout="disiconify1()">
+    <option data-countryCode="GB" value="44" Selected>Country code</option>
+	<option data-countryCode="GB" value="44" >UK (+44)</option>
+	<option data-countryCode="US" value="1">USA (+1)</option>
+	<optgroup label="Other countries">
+		<option data-countryCode="DZ" value="213">Algeria (+213)</option>
+		<option data-countryCode="AD" value="376">Andorra (+376)</option>
+		<option data-countryCode="AO" value="244">Angola (+244)</option>
+		<option data-countryCode="AI" value="1264">Anguilla (+1264)</option>
+		<option data-countryCode="AG" value="1268">Antigua &amp; Barbuda (+1268)</option>
+		<option data-countryCode="AR" value="54">Argentina (+54)</option>
+		<option data-countryCode="AM" value="374">Armenia (+374)</option>
+		<option data-countryCode="AW" value="297">Aruba (+297)</option>
+		<option data-countryCode="AU" value="61">Australia (+61)</option>
+		<option data-countryCode="AT" value="43">Austria (+43)</option>
+		<option data-countryCode="AZ" value="994">Azerbaijan (+994)</option>
+		<option data-countryCode="BS" value="1242">Bahamas (+1242)</option>
+		<option data-countryCode="BH" value="973">Bahrain (+973)</option>
+		<option data-countryCode="BD" value="880">Bangladesh (+880)</option>
+		<option data-countryCode="BB" value="1246">Barbados (+1246)</option>
+		<option data-countryCode="BY" value="375">Belarus (+375)</option>
+		<option data-countryCode="BE" value="32">Belgium (+32)</option>
+		<option data-countryCode="BZ" value="501">Belize (+501)</option>
+		<option data-countryCode="BJ" value="229">Benin (+229)</option>
+		<option data-countryCode="BM" value="1441">Bermuda (+1441)</option>
+		<option data-countryCode="BT" value="975">Bhutan (+975)</option>
+		<option data-countryCode="BO" value="591">Bolivia (+591)</option>
+		<option data-countryCode="BA" value="387">Bosnia Herzegovina (+387)</option>
+		<option data-countryCode="BW" value="267">Botswana (+267)</option>
+		<option data-countryCode="BR" value="55">Brazil (+55)</option>
+		<option data-countryCode="BN" value="673">Brunei (+673)</option>
+		<option data-countryCode="BG" value="359">Bulgaria (+359)</option>
+		<option data-countryCode="BF" value="226">Burkina Faso (+226)</option>
+		<option data-countryCode="BI" value="257">Burundi (+257)</option>
+		<option data-countryCode="KH" value="855">Cambodia (+855)</option>
+		<option data-countryCode="CM" value="237">Cameroon (+237)</option>
+		<option data-countryCode="CA" value="1">Canada (+1)</option>
+		<option data-countryCode="CV" value="238">Cape Verde Islands (+238)</option>
+		<option data-countryCode="KY" value="1345">Cayman Islands (+1345)</option>
+		<option data-countryCode="CF" value="236">Central African Republic (+236)</option>
+		<option data-countryCode="CL" value="56">Chile (+56)</option>
+		<option data-countryCode="CN" value="86">China (+86)</option>
+		<option data-countryCode="CO" value="57">Colombia (+57)</option>
+		<option data-countryCode="KM" value="269">Comoros (+269)</option>
+		<option data-countryCode="CG" value="242">Congo (+242)</option>
+		<option data-countryCode="CK" value="682">Cook Islands (+682)</option>
+		<option data-countryCode="CR" value="506">Costa Rica (+506)</option>
+		<option data-countryCode="HR" value="385">Croatia (+385)</option>
+		<option data-countryCode="CU" value="53">Cuba (+53)</option>
+		<option data-countryCode="CY" value="90392">Cyprus North (+90392)</option>
+		<option data-countryCode="CY" value="357">Cyprus South (+357)</option>
+		<option data-countryCode="CZ" value="42">Czech Republic (+42)</option>
+		<option data-countryCode="DK" value="45">Denmark (+45)</option>
+		<option data-countryCode="DJ" value="253">Djibouti (+253)</option>
+		<option data-countryCode="DM" value="1809">Dominica (+1809)</option>
+		<option data-countryCode="DO" value="1809">Dominican Republic (+1809)</option>
+		<option data-countryCode="EC" value="593">Ecuador (+593)</option>
+		<option data-countryCode="EG" value="20">Egypt (+20)</option>
+		<option data-countryCode="SV" value="503">El Salvador (+503)</option>
+		<option data-countryCode="GQ" value="240">Equatorial Guinea (+240)</option>
+		<option data-countryCode="ER" value="291">Eritrea (+291)</option>
+		<option data-countryCode="EE" value="372">Estonia (+372)</option>
+		<option data-countryCode="ET" value="251">Ethiopia (+251)</option>
+		<option data-countryCode="FK" value="500">Falkland Islands (+500)</option>
+		<option data-countryCode="FO" value="298">Faroe Islands (+298)</option>
+		<option data-countryCode="FJ" value="679">Fiji (+679)</option>
+		<option data-countryCode="FI" value="358">Finland (+358)</option>
+		<option data-countryCode="FR" value="33">France (+33)</option>
+		<option data-countryCode="GF" value="594">French Guiana (+594)</option>
+		<option data-countryCode="PF" value="689">French Polynesia (+689)</option>
+		<option data-countryCode="GA" value="241">Gabon (+241)</option>
+		<option data-countryCode="GM" value="220">Gambia (+220)</option>
+		<option data-countryCode="GE" value="7880">Georgia (+995)</option>
+		<option data-countryCode="DE" value="49">Germany (+49)</option>
+		<option data-countryCode="GH" value="233">Ghana (+233)</option>
+		<option data-countryCode="GI" value="350">Gibraltar (+350)</option>
+		<option data-countryCode="GR" value="30">Greece (+30)</option>
+		<option data-countryCode="GL" value="299">Greenland (+299)</option>
+		<option data-countryCode="GD" value="1473">Grenada (+1473)</option>
+		<option data-countryCode="GP" value="590">Guadeloupe (+590)</option>
+		<option data-countryCode="GU" value="671">Guam (+671)</option>
+		<option data-countryCode="GT" value="502">Guatemala (+502)</option>
+		<option data-countryCode="GN" value="224">Guinea (+224)</option>
+		<option data-countryCode="GW" value="245">Guinea - Bissau (+245)</option>
+		<option data-countryCode="GY" value="592">Guyana (+592)</option>
+		<option data-countryCode="HT" value="509">Haiti (+509)</option>
+		<option data-countryCode="HN" value="504">Honduras (+504)</option>
+		<option data-countryCode="HK" value="852">Hong Kong (+852)</option>
+		<option data-countryCode="HU" value="36">Hungary (+36)</option>
+		<option data-countryCode="IS" value="354">Iceland (+354)</option>
+		<option data-countryCode="IN" value="91">India (+91)</option>
+		<option data-countryCode="ID" value="62">Indonesia (+62)</option>
+		<option data-countryCode="IR" value="98">Iran (+98)</option>
+		<option data-countryCode="IQ" value="964">Iraq (+964)</option>
+		<option data-countryCode="IE" value="353">Ireland (+353)</option>
+		<option data-countryCode="IL" value="972">Israel (+972)</option>
+		<option data-countryCode="IT" value="39">Italy (+39)</option>
+		<option data-countryCode="JM" value="1876">Jamaica (+1876)</option>
+		<option data-countryCode="JP" value="81">Japan (+81)</option>
+		<option data-countryCode="JO" value="962">Jordan (+962)</option>
+		<option data-countryCode="KZ" value="7">Kazakhstan (+7)</option>
+		<option data-countryCode="KE" value="254">Kenya (+254)</option>
+		<option data-countryCode="KI" value="686">Kiribati (+686)</option>
+		<option data-countryCode="KP" value="850">Korea North (+850)</option>
+		<option data-countryCode="KR" value="82">Korea South (+82)</option>
+		<option data-countryCode="KW" value="965">Kuwait (+965)</option>
+		<option data-countryCode="KG" value="996">Kyrgyzstan (+996)</option>
+		<option data-countryCode="LA" value="856">Laos (+856)</option>
+		<option data-countryCode="LV" value="371">Latvia (+371)</option>
+		<option data-countryCode="LB" value="961">Lebanon (+961)</option>
+		<option data-countryCode="LS" value="266">Lesotho (+266)</option>
+		<option data-countryCode="LR" value="231">Liberia (+231)</option>
+		<option data-countryCode="LY" value="218">Libya (+218)</option>
+		<option data-countryCode="LI" value="417">Liechtenstein (+417)</option>
+		<option data-countryCode="LT" value="370">Lithuania (+370)</option>
+		<option data-countryCode="LU" value="352">Luxembourg (+352)</option>
+		<option data-countryCode="MO" value="853">Macao (+853)</option>
+		<option data-countryCode="MK" value="389">Macedonia (+389)</option>
+		<option data-countryCode="MG" value="261">Madagascar (+261)</option>
+		<option data-countryCode="MW" value="265">Malawi (+265)</option>
+		<option data-countryCode="MY" value="60">Malaysia (+60)</option>
+		<option data-countryCode="MV" value="960">Maldives (+960)</option>
+		<option data-countryCode="ML" value="223">Mali (+223)</option>
+		<option data-countryCode="MT" value="356">Malta (+356)</option>
+		<option data-countryCode="MH" value="692">Marshall Islands (+692)</option>
+		<option data-countryCode="MQ" value="596">Martinique (+596)</option>
+		<option data-countryCode="MR" value="222">Mauritania (+222)</option>
+		<option data-countryCode="YT" value="269">Mayotte (+269)</option>
+		<option data-countryCode="MX" value="52">Mexico (+52)</option>
+		<option data-countryCode="FM" value="691">Micronesia (+691)</option>
+		<option data-countryCode="MD" value="373">Moldova (+373)</option>
+		<option data-countryCode="MC" value="377">Monaco (+377)</option>
+		<option data-countryCode="MN" value="976">Mongolia (+976)</option>
+		<option data-countryCode="MS" value="1664">Montserrat (+1664)</option>
+		<option data-countryCode="MA" value="212">Morocco (+212)</option>
+		<option data-countryCode="MZ" value="258">Mozambique (+258)</option>
+		<option data-countryCode="MN" value="95">Myanmar (+95)</option>
+		<option data-countryCode="NA" value="264">Namibia (+264)</option>
+		<option data-countryCode="NR" value="674">Nauru (+674)</option>
+		<option data-countryCode="NP" value="977">Nepal (+977)</option>
+		<option data-countryCode="NL" value="31">Netherlands (+31)</option>
+		<option data-countryCode="NC" value="687">New Caledonia (+687)</option>
+		<option data-countryCode="NZ" value="64">New Zealand (+64)</option>
+		<option data-countryCode="NI" value="505">Nicaragua (+505)</option>
+		<option data-countryCode="NE" value="227">Niger (+227)</option>
+		<option data-countryCode="NG" value="234">Nigeria (+234)</option>
+		<option data-countryCode="NU" value="683">Niue (+683)</option>
+		<option data-countryCode="NF" value="672">Norfolk Islands (+672)</option>
+		<option data-countryCode="NP" value="670">Northern Marianas (+670)</option>
+		<option data-countryCode="NO" value="47">Norway (+47)</option>
+		<option data-countryCode="OM" value="968">Oman (+968)</option>
+		<option data-countryCode="PW" value="680">Palau (+680)</option>
+		<option data-countryCode="PA" value="507">Panama (+507)</option>
+		<option data-countryCode="PG" value="675">Papua New Guinea (+675)</option>
+		<option data-countryCode="PY" value="595">Paraguay (+595)</option>
+		<option data-countryCode="PE" value="51">Peru (+51)</option>
+		<option data-countryCode="PH" value="63">Philippines (+63)</option>
+		<option data-countryCode="PL" value="48">Poland (+48)</option>
+		<option data-countryCode="PT" value="351">Portugal (+351)</option>
+		<option data-countryCode="PR" value="1787">Puerto Rico (+1787)</option>
+		<option data-countryCode="QA" value="974">Qatar (+974)</option>
+		<option data-countryCode="RE" value="262">Reunion (+262)</option>
+		<option data-countryCode="RO" value="40">Romania (+40)</option>
+		<option data-countryCode="RU" value="7">Russia (+7)</option>
+		<option data-countryCode="RW" value="250">Rwanda (+250)</option>
+		<option data-countryCode="SM" value="378">San Marino (+378)</option>
+		<option data-countryCode="ST" value="239">Sao Tome &amp; Principe (+239)</option>
+		<option data-countryCode="SA" value="966">Saudi Arabia (+966)</option>
+		<option data-countryCode="SN" value="221">Senegal (+221)</option>
+		<option data-countryCode="CS" value="381">Serbia (+381)</option>
+		<option data-countryCode="SC" value="248">Seychelles (+248)</option>
+		<option data-countryCode="SL" value="232">Sierra Leone (+232)</option>
+		<option data-countryCode="SG" value="65">Singapore (+65)</option>
+		<option data-countryCode="SK" value="421">Slovak Republic (+421)</option>
+		<option data-countryCode="SI" value="386">Slovenia (+386)</option>
+		<option data-countryCode="SB" value="677">Solomon Islands (+677)</option>
+		<option data-countryCode="SO" value="252">Somalia (+252)</option>
+		<option data-countryCode="ZA" value="27">South Africa (+27)</option>
+		<option data-countryCode="ES" value="34">Spain (+34)</option>
+		<option data-countryCode="LK" value="94">Sri Lanka (+94)</option>
+		<option data-countryCode="SH" value="290">St. Helena (+290)</option>
+		<option data-countryCode="KN" value="1869">St. Kitts (+1869)</option>
+		<option data-countryCode="SC" value="1758">St. Lucia (+1758)</option>
+		<option data-countryCode="SD" value="249">Sudan (+249)</option>
+		<option data-countryCode="SR" value="597">Suriname (+597)</option>
+		<option data-countryCode="SZ" value="268">Swaziland (+268)</option>
+		<option data-countryCode="SE" value="46">Sweden (+46)</option>
+		<option data-countryCode="CH" value="41">Switzerland (+41)</option>
+		<option data-countryCode="SI" value="963">Syria (+963)</option>
+		<option data-countryCode="TW" value="886">Taiwan (+886)</option>
+		<option data-countryCode="TJ" value="7">Tajikstan (+7)</option>
+		<option data-countryCode="TH" value="66">Thailand (+66)</option>
+		<option data-countryCode="TG" value="228">Togo (+228)</option>
+		<option data-countryCode="TO" value="676">Tonga (+676)</option>
+		<option data-countryCode="TT" value="1868">Trinidad &amp; Tobago (+1868)</option>
+		<option data-countryCode="TN" value="216">Tunisia (+216)</option>
+		<option data-countryCode="TR" value="90">Turkey (+90)</option>
+		<option data-countryCode="TM" value="7">Turkmenistan (+7)</option>
+		<option data-countryCode="TM" value="993">Turkmenistan (+993)</option>
+		<option data-countryCode="TC" value="1649">Turks &amp; Caicos Islands (+1649)</option>
+		<option data-countryCode="TV" value="688">Tuvalu (+688)</option>
+		<option data-countryCode="UG" value="256">Uganda (+256)</option>
+		<!-- <option data-countryCode="GB" value="44">UK (+44)</option> -->
+		<option data-countryCode="UA" value="380">Ukraine (+380)</option>
+		<option data-countryCode="AE" value="971">United Arab Emirates (+971)</option>
+		<option data-countryCode="UY" value="598">Uruguay (+598)</option>
+		<!-- <option data-countryCode="US" value="1">USA (+1)</option> -->
+		<option data-countryCode="UZ" value="7">Uzbekistan (+7)</option>
+		<option data-countryCode="VU" value="678">Vanuatu (+678)</option>
+		<option data-countryCode="VA" value="379">Vatican City (+379)</option>
+		<option data-countryCode="VE" value="58">Venezuela (+58)</option>
+		<option data-countryCode="VN" value="84">Vietnam (+84)</option>
+		<option data-countryCode="VG" value="84">Virgin Islands - British (+1284)</option>
+		<option data-countryCode="VI" value="84">Virgin Islands - US (+1340)</option>
+		<option data-countryCode="WF" value="681">Wallis &amp; Futuna (+681)</option>
+		<option data-countryCode="YE" value="969">Yemen (North)(+969)</option>
+		<option data-countryCode="YE" value="967">Yemen (South)(+967)</option>
+		<option data-countryCode="ZM" value="260">Zambia (+260)</option>
+		<option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
+	</optgroup>
+</select>
+
+ </div>
+          </div>
+          <div class="form-group ">
+                <div class="surname inputWithIcon" >
+                <input type="number" style="border-radius: 4px;
+                margin: 5px;
+                display: block;
+                height: 50px;
+                width: 100%;
+                border: 1px solid #cccccc;" pattern="{1}[0-9]{11,14}" class="form-control mobilenum" placeholder="Phone number" name = "phonenumber" required id="phonenumber">
+                 <i class="fas fa-mobile" id="inputicon_phonenumber"  style="margin-left: 8px;"  aria-hidden="true"></i> 
+                </div>
+                
+              </div>
+
+
+              </div>
+              <div class="form-row justify-content-between">
+
+                  <div class="form-group col-md-3">
+                      <label for="formGroupExampleInput2">Arrival Date</label>
+                      <input type="date" class="firstdate-popup" name="firstdate" id="pick_date_popup" required="required" >
+                     
+                    </div>
+                <div class="form-group col-md-3">
+                  <label for="formGroupExampleInput2">Departure Date</label>
+                  <input type="date" class="seconddate-popup" name="seconddate"
+                  id="drop_date_popup" required="required"  >
+                </div>
+
+              <div class="form-group  col-md-2" id="sellgroup">
+                <label for="sel1" >Guests</label>
+                <select class="form-control-range" style="margin-top: 10px;" name="guests"  id="sel1_popup" > 
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                </select>
+              </div>
+
+              <input type="hidden" name="guests_number" id="guests_number" value="0"/>
+
+
+               <div class="form-group  col-md-15" style="display:flex; flex-direction:column; justify-content:center;" >
+
+                <label for="sel2">Available accomodation types: </label> 
+                <select class="form-control-range"  id="sel2_popup"  style=" max-width:100%; ">
+                 
+                  {% for block in page.room_options %}
+                      {% include_block block %}
+                  {% endfor %}
+                  
+                </select>
+              </div>
+              <input type="hidden" name="accomodation_type" id="accomodation_type" value="0"/>
+
+              <label class="form-check-label" for="gridCheck">
+
+              </label>
+              </div>
+
+
+            <div  class="form-group ">
+
+
+              <label for="formGroupExampleInput2">special needs</label>
+              <br>
+              <input type="checkbox" name="match-with-pairs"/> Vegetarian Diet<br>
+
+              <input type="checkbox" name="match-with-pairs2"/>   Transportation to community<br>
+              <span style="font-size:0.8rem;">For all special needs please use our Contact Us form well in advance of your trip and before sending this form. We will try to accommodate you or provide an alternative.  For transportation needs, please detail pick-up point and we will let you know the cost and details</span>
+
+
+            </div>
+            <style>
+            textarea{
+              width:100%;
+             resize:none;
+            }
+            </style>
+            <div id="numdays-popup" style="display:flex; flex-direction:column">
+
+    <div class="breakdown-box">
+
+      <label class="form" id="accomodation-price-popup"style="margin-bottom: 10px">Accomodation and breakfasts:   </label>
+      <label class="form" id="accomodation-value-label-popup"style="margin-bottom: 10px"></label>
+      <input type="hidden" name="accomodation_and_breakfast" id="accomodation_and_breakfast" value="0"/>
+
+</div>
+<div class="breakdown-box">
+
+      <label class="form" id="tour-price-popup"style="margin-bottom: 10px">Tour:   </label>
+      <label class="form" id="tour-value-label-popup"style="margin-bottom: 10px"></label>
+      <input type="hidden" name="popup_tour_price" id="popup_tour_price" value="0"/>
+
+</div>
+<div class="breakdown-box">
+
+      <label class="form" id="admin-price-popup"style="margin-bottom: 10px">Administration fee:   </label>
+      <label class="form" id="admin-value-label-popup"style="margin-bottom: 10px"></label>
+      <input type="hidden" name="administration_fee_price" id="administration_fee_price" value="0"/>
+
+</div>
+<div class="breakdown-box">
+
+      <label class="form" id="community-price-popup"style="margin-bottom: 10px">Community Fund:   </label>
+      <label class="form" id="community-value-label-popup"style="margin-bottom: 10px"></label>
+      <input type="hidden" name="community_fund_price" id="community_fund_price" value="0"/>
+
+</div>
+
+<div class="breakdown-box">
+      <label class="form" id="total-price-popup"  style="margin-bottom: 10px">Total price:   </label>
+      <label class="form" id="total-value-label-popup"style="margin-bottom: 10px"></label>
+                            <input id="price_send" type="text" style = "display:none;" value="344" name = "totalPrice" >
+                            <input type="hidden" name="popup_total_price" id="popup_total_price" value="0"/>
+
+
+    </div>
+
+     <div class="modal-header heading-color"  style="text-align:center;">
+        <h5 class="modal-title">Pay on Arrival</h5>
+          
+    </div>
+     <span style="color:red; font-size:12px; width: 100%; display:flex; justify-content:center;"> <u> Activities are created by our communities and paid directly at the destination </u>  </span> 
+    <div class="breakdown-box">
+<div style="display:flex; "  >
+      <label class="form" id="activity-price-popup"style="margin-bottom: 10px">Activities:   </label>&nbsp;&nbsp;&nbsp;
+
+      <label class="form" id="activity-value-label-popup"style="margin-bottom: 10px"></label>
+      </div>
+</div>
+ <div class="breakdown-box" >
+      <label class="form" id="acts-total-price-popup"style="margin-bottom: 10px">Total:   </label>
+      <label class="form" id="acts-total-value-label-popup"style="margin-bottom: 10px"></label>
+    </div> 
+    </div>
+
+
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" required id="gridCheck">
+                <label class="form-check-label" for="gridCheck" >
+                    I have read and agree to the <a style="color:#ec7e24;" href="/termsandconditions"> Terms and Conditions </a> <br>
+               
+            <span style="font-size:0.9rem;">Any questions you have <span style="font-weight: bold">prior</span> to sending this Request-to-Book, please use our <span style="color:#ec7e24">Contact form here</span>.  For example, if you need transportation from your point of arrival, we will be happy to tell you the cost and arrange it for you and you will pay on arrival.</span>
+                  </input>
+              </div>
+            </div>
+            <div style="float: right;">
+
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                <button type="submit" class="btn btn-success" id="send-req-popup" onsubmit="validate()">Send request</button>
+
+            </div>
+          </form>
+      </div>
+      <div class="modal-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+ <!-- Booking popup end -->
+
+
+
+             <div class="row">
+        <div class="col-sm-12">
+
+ <div class="col-md-6 col-lg-6 section-md-t3" >
+                
+                <div class="col-sm-12">
+                  <div class="title-box-d">
+                    <h3 class="title-d" > <span class="heading-color new-heading">{{self.description_title}} </span></h3>
+                  </div>
+                </div>
+              </div>
+              <div class="property-description " style=";">
+                <p class="new-text ">
+                {{self.description_text}}
+                </p>
+
+              </div>
+              <!--/ Amentities start /--> 
+            
+     <div class="col-md-6 col-lg-6 section-md-t3 mobile-amenities " style="margin-top:5px; max-width: -moz-fit-content !important;  max-width: fit-content !important;">
+
+              
+      <div class="col-sm-12">
+        <div class="title-box-d">
+          <h3 class="title-d heading-color new-heading">{{self.amenities_section_title}}</h3>
+        
+      </div>
+    </div>
+    <div class="amenities-list color-text-a" style="box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);">
+      <ul class="list-a no-margin list-amenities">
+
+
+        {% for block in page.amenities %}
+            {% include_block block %}
+        {% endfor %}
+
+        <i class=""></i>
+
+
+
+      </ul>
+    </div>
+  </div>
+
+  <!--/ Amentities End /-->
+ <!--/ Services start /-->
+   
+
+ <div class="col-md- col-lg-12 section-md-t3 section-t4">
+
+  <div class="col-sm-12">
+    <div class="title-box-d">
+      <h3 class="title-d heading-color new-heading">{{self.included_services_title}}</h3>
+                     
+                    </div>
+  </div>
+      <div class="d-flex row justify-content-between">
+<style>
+  .col-md-7{
+    flex:0 0 95.333333% !important;
+    max-width: 95.333333%;
+    margin-left: -3%;
+  }
+  .col-lg-7{
+    flex:0 0 95.333333% !important;
+    max-width: 95.333333%;
+  }
+  .intro-single .title-single-box{
+    margin-bottom: 5%;
+  }
+</style>
+  <div class="col-md-7 col-lg-7 section-md-t3"style="padding:0; margin:0; ">
+
+  <div class="property-description" >
+    <p class="description color-text-a">
+     <ul style="list-style-type: square;">
+<p> {{self.included_services_subtitle}}</p>
+
+      <ul style="list-style-type: disc;">
+
+          <li class="card-text new-text">{{self.l1}} </li>
+
+          {% if self.l2 %}
+          <li class="card-text new-text">{{self.l2}} </li>
+          {% endif %}
+          {% if self.l3 %}
+          <li class="card-text new-text">{{self.l3}} </li>
+          {% endif %}
+          {% if self.l4 %}
+          <li class="card-text new-text">{{self.l4}} </li>
+          {% endif %}
+          {% if self.l5 %}
+          <li class="card-text new-text">{{self.l5}} </li>
+          {% endif %}
+          {% if self.l6 %}
+          <li class="card-text new-text">{{self.l6}} </li>
+          {% endif %}
+          {% if self.l7 %}
+          <li class="card-text new-text">{{self.l7}} </li>
+          {% endif %}
+          {% if self.l8 %}
+          <li class="card-text new-text">{{self.l8}} </li>
+          {% endif %}
+          {% if self.l9 %}
+          <li class="card-text new-text">{{self.l9}} </li>
+          {% endif %}
+          {% if self.l10 %}
+          <li class="card-text new-text">{{self.l10}} </li>
+          {% endif %}
+          {% if self.l11 %}
+          <li class="card-text new-text">{{self.l11}} </li>
+          {% endif %}
+          {% if self.l12 %}
+          <li class="card-text new-text">{{self.l12}} </li>
+          {% endif %}
+      </ul>
+      <br>
+      <li class="list-unstyled new-text">
+        {{self.tour_content_change_warning}}
+      </li>
+       </ul>
+    </p>
+    <br>
+
+    <p class="description color-text-a no-margin">
+    <ul>
+      <br>
+      <p class="heading-color new-heading" >{{self.not_included_services_title}}</p>
+          <li class="card-text new-text">{{self.ll1}} </li>
+
+          {% if self.ll2 %}
+          <li class="card-text new-text">{{self.ll2}} </li>
+          {% endif %}
+          {% if self.ll3 %}
+          <li class="card-text new-text">{{self.ll3}} </li>
+          {% endif %}
+          {% if self.ll4 %}
+          <li class="card-text new-text">{{self.ll4}} </li>
+          {% endif %}
+          {% if self.ll5 %}
+          <li class="card-text new-text">{{self.ll5}} </li>
+          {% endif %}
+          {% if self.ll6 %}
+          <li class="card-text new-text">{{self.ll6}} </li>
+          {% endif %}
+          {% if self.ll7 %}
+          <li class="card-text new-text">{{self.ll7}} </li>
+          {% endif %}
+          {% if self.ll8 %}
+          <li class="card-text new-text">{{self.ll8}} </li>
+          {% endif %}
+          {% if self.ll9 %}
+          <li class="card-text new-text">{{self.ll9}} </li>
+          {% endif %}
+          {% if self.ll10 %}
+          <li class="card-text new-text">{{self.ll10}} </li>
+          {% endif %}
+          {% if self.ll11 %}
+          <li class="card-text new-text">{{self.ll11}} </li>
+          {% endif %}
+          {% if self.ll12 %}
+          <li class="card-text new-text">{{self.ll12}} </li>
+          {% endif %}
+    </ul>
+    </p>
+  </div>
+  </div>
+             </div>
+             
+             </div>
+
+           
+
+
+   
+
+
+
+
+
+  <!--/ Property Single End /-->
+
+
+</div>
+</div>
+
+
+</section>
+<div id="snackbar"></div>
+  <!--/ footer Star /-->
+
+  <section class="section-footer" >
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-sm-12 col-md-4">
+
+        <div class="widget-a">
+
+          <div class="w-header-a">
+
+            <h3 class="w-title-a heading-color">BSST</h3>
+
+          </div>
+
+          <div class="w-body-a">
+
+            <p class="w-text-a color-text-a" style="font-size:1rem">
+              BSST is a social venture of <a href="https://www.ruralsusdev.org/" > Sustainable Rural Development  </a> 
+              International Limited, a non-profit incorporated in England
+              And Wales, Registration Number 8148076
+              
+
+            </p>
+
+          </div>
+
+          <div class="w-footer-a" >
+
+            <ul class="list-unstyled">
+
+              <li class="color-a">
+
+                <span class="color-text-a">Phone .</span> +44 207.549.3750</li>
+
+              <li class="color-a">
+
+                <span class="color-text-a">Email .</span> infosrdi@vesselkaconsult.com</li>
+                <li>
+
+                  <img class="cursor-pointer" src="{% static 'img/GSTCicon.jpg' %}" style="height:120px;width:120px;" onclick="location.href='https://www.gstcouncil.org/'">
+    
+                </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-12 col-md-4 section-md-t3">
+
+        <div class="widget-a">
+
+          <div class="w-header-a">
+
+            <h2 class="w-title-a heading-color">The BSST Social Venture </h2>
+
+          </div>
+
+          <div class="w-body-a">
+
+            <div class="w-body-a">
+
+              <ul class="list-unstyled">
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/aboutus">About</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/faq">FAQ</a>
+
+                </li>
+
+
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/termsandconditions"> General Terms and Conditions</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/termsofuse">Website Terms of Use</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/privacypolicy">Privacy Policy </a>
+
+                </li>
+<li class="item-list-a">
+
+                    <i class="fa fa-angle-right"></i> <a data-toggle="modal" class="cursor-pointer" data-target="#joinModal">Join Us </a>
+  
+                  </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-12 col-md-4 section-md-t3">
+
+        <div class="widget-a">
+
+          <div class="w-header-a">
+
+            <h3 class="w-title-a heading-color">Our Communities</h3>
+
+          </div>
+
+          <div class="w-body-a">
+
+            <ul class="list-unstyled">
+
+              <li class="item-list-a">
+
+                <i class="fa fa-angle-right"></i> <a href="/georgia" class="country_link_ge_footer">Georgia</a>
+              </li>
+
+              <li class="item-list-a">
+
+                <i class="fa fa-angle-right "></i> <a href="#" class="country_link_ukr_footer">Ukraine</a>
+                
+              </li>
+
+              <li class="item-list-a">
+
+                <i class="fa fa-angle-right"></i> <a href="#" class="country_link_tur_footer">Turkey</a>
+
+              </li>
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer style="width:100%; ">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+                <nav class="nav-footer" >
+
+          <ul class="list-inline" style="margin-top:15px;">
+              
+
+            <li class="list-inline-item">
+
+              <a href="/">Home</a>
+
+            </li>
+
+            <li class="list-inline-item">
+
+              <a href="/contactus">Contact</a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <div class="socials-a">
+
+          <ul class="list-inline">
+
+           
+{% for block in page.social_media_links %}
+    {% include_block block %}
+{% endfor %}
+      
+
+          </ul>
+
+        </div>
+
+        <div class="copyright-footer" >
+
+          <p class="copyright color-text-a">
+
+            &copy; Copyright
+
+            <span class="color-a">SRDI</span> All Rights Reserved.
+          </p>
+
+        </div>
+
+        <div class="credits">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+  <!--/ Footer End /-->
+
+
+
+  <!--/ Booking Trigger for mobile start /-->
+   <div class="fixed-bottom" id="fixed-bottom">
+
+    <div class="col-md-5 col-lg-4 section-md-t3 button-book-text-mobile"  style="margin:auto; padding:10px; display:none; background-color:white; text-align:center;
+">
+           <h5 class="modal-title heading-color">Minimum two nights</h5>
+          <button type="button" class="btn btn-success req-to-book"  data-toggle="modal" data-target="#exampleModalCenter"  >
+            Request to book
+            </button>
+          </div>
+</div>
+
+  <script> var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("fixed-bottom").style.bottom = "0";
+  } else {
+    document.getElementById("fixed-bottom").style.bottom = "-1000px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+
+<!--/ Booking Trigger for mobile end /-->
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="{% static 'js/navbar_links.js' %}"></script>
+  <script src="{% static 'js/join-us.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+  
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/booking.js' %}"> </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.5/slick.min.js'></script><script  src="{% static 'js/script.js' %}"></script>
+  <script src="{% static 'js/accomodationslider.js' %}"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+<script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="{% static 'lib/scrollreveal/scrollreveal.min.js' %}"></script>
+  <!-- Contact Form JavaScript File -->
+   <!--Gallery js-->
+ <script type="text/javascript" src="{% static 'js/grid-gallery.min.js' %}"></script>
+ 
+ <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+  <!-- Main Javascript File -->
+  <script src="{% static 'ss/main.js' %}"></script>
+  <script src="{% static 'js/navbar_links.js' %}"></script>
+  <script src="{% static 'js/jquery.lazy.js' %}"></script>
+<script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
+<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
+
+</body>
+
+</html>

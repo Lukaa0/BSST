@@ -1,0 +1,11 @@
+
+
+{% load wagtailcore_tags wagtailimages_tags%}
+<div >
+
+  {% image self.image max-1489x798 as img%}
+<div class="iconcontainer" style="height: 80px; width: 80px; margin-bottom: 20px; background-image: url('{{img.url}}'); background-size: cover;"></div> 
+
+</div>
+
+<p class="ab-main-text new-text"> {{self.description}} </p>

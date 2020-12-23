@@ -1,0 +1,47 @@
+{% load wagtailcore_tags wagtailimages_tags%}
+
+
+<div class="carousel-item-b" onclick="location.href='{{self.page_link.url}}'">
+    <div class="card-box-a card-shadow com-card">
+    <div class="img-box-a">
+
+  {% image self.image fill-1489x798 as img%}
+        <img src="{{img.url}}" alt="" style="object-fit:cover"class=" img-a img-fluid">
+    </div>
+    <div class="card-overlay">
+        <div class="card-overlay-a-content">
+        <div class="card-header-a">
+            <h2 class="card-title-a">
+            <a href="{{self.page_link.url}}">{{self.accommodation_name}}
+                <br />  </a>
+            </h2>
+        </div>
+        <div class="card-body-a">
+            <div class="price-box d-flex" style="justify-content: space-between;">
+                <span style="cursor:pointer"onclick="location.href='{{self.page_link}}';" class="price-a">{{self.accommodation_price}} </span>
+                    <!-- Button trigger modal --> 
+                <span class="price-a"   class="btn btn-success"  style=" cursor: pointer;">View and book</span>
+                </div>
+            </a>
+        </div>
+        <div class="card-footer-a">
+            <ul class="card-info d-flex justify-content-around">
+            
+            <li>
+                <h4 class="card-info-title">{{self.attribute1_title}}</h4>
+                <span>{{self.attribute1_text}} </span>
+            </li>
+            <li>
+                <h4 class="card-info-title">{{self.attribute2_title}}</h4>
+                <span>{{self.attribute2_text}} </span>
+            </li>
+            <li>
+                <h4 class="card-info-title">{{self.attribute3_title}}</h4>
+                <span>{{self.attribute3_text}} </span>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+ .thumbnail-text{
+position: absolute;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 400px;
+  bottom:5px;
+  padding: 20px;
+  }
+.span4 img {
+    margin-right: 40px;
+
+}
+.span4 {
+  margin-top:5px;
+
+}
+.span4 p{
+  margin-top:10px;
+}
+.dcm-image p{
+    align-content: center;
+    text-align: center;
+}
+.test1div .dcm-image{
+    position:relative;
+    margin-top:10px;
+}
+
+.span4 .dcm-image  {
+    float: left;
+    max-width:100%;
+    width:400px;
+
+  height:300px;
+}

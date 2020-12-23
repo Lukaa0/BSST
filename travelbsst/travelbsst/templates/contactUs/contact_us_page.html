@@ -1,0 +1,831 @@
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>BSST</title>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="" name="keywords">
+
+  <meta content="" name="description">
+
+
+
+  <!-- Favicons -->
+
+  <link href="{% static 'img/logo.jpg' %}" rel="icon">
+
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+
+
+  <!-- Google Fonts -->
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+
+
+  <!-- Bootstrap CSS File -->
+
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+
+  <!-- Libraries CSS Files -->
+
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+
+
+  <!-- Main Stylesheet File -->
+
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+  <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+  <link href="{% static 'css/contact.css' %}" rel="stylesheet">
+
+
+
+  <link href="{% static 'css/home.css' %}" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/brands.css"
+
+  integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css"
+
+  integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+</head>
+
+
+
+<body>
+
+ 
+
+  <!--     
+
+    <a href="#" class="float">
+
+    <i class="fab fa-facebook-messenger floating-button fa-2x"></i>
+
+    </a> -->
+
+  
+
+
+
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!--/ Nav Star /-->
+
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+      <button class="navbar-toggler  burger-bar collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+      <!-- Main Logo -->
+      <a href="/">
+        <div class="modal_logo modal-logo-main" style="background-image: url({% static 'img/logo.jpg' %}); background-size:cover;  margin-top:7px;" > </div>
+            
+          </a>
+            <a class="navbar-brand text-brand" href="/" style="font-size:15px; text-align: center; color: #00635e" > The Black Sea Sustainable<span class="color-b" > <br>  Rural Tourism Program  </span> 
+      
+            
+      
+            </a>
+<style>
+ 
+</style>
+     
+
+     <a class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none custom-dbox-popup">
+          <i class="fas fa-seedling" href style="color:#00635e; font-size:1.5rem;"aria-hidden="true"></i>
+
+
+        </a>
+
+
+
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+
+        <!-- Navbar Elements  -->
+
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="/">Home</a>
+
+          
+
+          </li>
+
+          <li class="nav-item">
+
+            
+
+            <div class="dropdown">
+
+                <span id="communitieshover" class="nav-link">Where to </span>
+
+               <div class="dropdown-content">
+
+                  <a href="/georgia" class="fa fa-map-marker country_link_ge" > <span class="font-family-poppins heading-color">Georgia</span></a>
+
+                <a  href="#" class="fa fa-map-marker country_link_tur" > <span class="font-family-poppins heading-color">Turkey</span></a>
+
+                <a  href="#" class="fa fa-map-marker country_link_ukr" > <span class="font-family-poppins heading-color">Ukraine</span></a>
+
+                </div>
+
+                </div>
+
+              
+
+            
+
+          </li>
+
+
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="/aboutus">About us</a>
+
+          </li>
+
+          <li class="nav-item">
+
+            <a class="nav-link active" href="/contactus">Contact us</a>
+
+          </li>
+
+          </li>
+
+          
+
+        </ul>
+
+      </div>
+
+      <!-- Registration Button -->
+
+       <a class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block custom-dbox-popup"
+       href="https://donorbox.org/the-black-sea-community-fund"  style="border-radius:4px;"> Support Community
+    </a>
+
+    </div>
+
+  </nav>
+
+<style>
+.new-heading {
+  color: {{self.headings_font_color}};
+  font-family:"{{self.headings_font_family}}" ;
+  font-size:{{self.headings_font_size}};
+}
+
+.new-text {
+  color: {{self.paragraphs_font_color}};
+  font-family: "{{self.paragraphs_font_family}}";
+  font-size: {{self.paragraphs_font_size}};
+}
+
+
+</style>
+
+  <!--/ Nav End /-->
+  <join-us></join-us>
+
+
+
+  <!--/ Intro Single star /-->
+
+  <section class="intro-single">
+
+    <div class="container">
+
+      <div class="row">
+
+        <div class="col-md-12 col-lg-8">
+
+          <div class="title-single-box">
+
+            <h1 class="title-single new-heading">{{self.page_title}}</h1>
+
+            <span class="color-text-a new-text">{{self.sub_title}}
+            </span>
+
+          </div>
+
+        </div>
+
+        <div class="col-md-12 col-lg-4">
+
+          <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
+
+            <ol class="breadcrumb">
+
+              <li class="breadcrumb-item">
+
+                <a href="/">Home</a>
+
+              </li>
+
+              <li class="breadcrumb-item active" aria-current="page">
+
+                Contact
+
+              </li>
+
+            </ol>
+
+          </nav>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--/ Intro Single End /-->
+
+
+  <!--/ Contact Star /-->
+
+  <section class="contact">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-sm-12 section-t8">
+
+          <div class="row">
+
+            <div class="col-md-7">
+
+              <form method="post" action="{% url 'contactUsRequest' %}" >    
+                <!-- <form method="post" action="" >     -->
+                  <!-- <form >     -->
+                  {% csrf_token %}
+                <!-- <div id="sendmessage">Your message has been sent. Thank you!</div> -->
+
+                <div id="errormessage"></div>
+
+                <div class="row">
+
+                  <div class="col-md-12 mb-3">
+
+                    <div class="form-group">
+
+                      <input type="text"  name="name" class="form-control form-control-lg form-control-a" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+
+                      <div class="validation"></div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-12 mb-3">
+
+                    <div class="form-group">
+
+                      <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email">
+
+                      <div class="validation"></div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-12 mb-3">
+
+                    <div class="form-group">
+
+                      <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject">
+
+                      <div class="validation"></div>
+
+                    </div>
+
+                  </div>
+
+                  <div class="col-md-12 mb-3">
+
+                    <div class="form-group">
+
+                      <textarea name="message" class="form-control" name="message" cols="45" rows="8" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+
+                      <div class="validation"></div>
+
+                    </div>
+
+
+                  </div>
+                  <div class="col-md-12 mb-3">
+
+                    <div class="form-group">
+                      <div class="g-recaptcha" data-sitekey="6Lc5AaYZAAAAAOtunMdSOxMZ8nQHb3EvFGhzGyW3"></div>
+
+
+                    </div>
+
+
+                  </div>
+
+
+                  <div class="col-md-12">
+
+                    <button type="submit" class="btn btn-a" style="background-color: #00635e;">Send Message</button>
+
+                  </div>
+
+                </div>
+
+              </form>
+
+            </div>
+
+            <div class="col-md-5 section-md-t3">
+
+              <div class="icon-box section-b2">
+
+                <div class="icon-box-icon">
+
+                  <span class="ion-ios-paper-plane" style="color:#00635e;"></span>
+
+                </div>
+
+                <div class="icon-box-content table-cell">
+
+                  <div class="icon-box-title">
+
+                    <h4 class="icon-title new-heading">Say Hello</h4>
+
+                  </div>
+
+                  <div class="icon-box-content">
+
+                    <p class="mb-1 new-text">Email.
+
+                      <span class="color-a new-text">infosrdi@vesselkaconsult.com</span>
+
+                    </p>
+
+                    <p class="mb-1 new-text">Phone.
+
+                      <span class="color-a new-text">+44 207 5493570</span>
+
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="icon-box section-b2">
+
+                <div class="icon-box-icon">
+
+                  <span class="ion-ios-pin" style="color: #00635e;"></span>
+
+                </div>
+
+                <div class="icon-box-content table-cell">
+
+                  <div class="icon-box-title">
+
+                    <h4 class="icon-title new-heading">Find us in</h4>
+
+                  </div>
+
+                  <div class="icon-box-content">
+
+                    <p class="mb-1 new-text">
+
+                       5 St. Johns Lane, London
+
+                      <br> EC1M 4BH
+
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+              <div class="icon-box">
+
+                <div class="icon-box-icon">
+
+                  <span class="ion-ios-redo" style="color: #00635e;" ></span>
+
+                </div>
+
+                <div class="icon-box-content table-cell">
+
+                  <div class="icon-box-title">
+
+                    <h4 class="icon-title new-heading">Social networks</h4>
+
+                  </div>
+
+                  <div class="icon-box-content">
+
+                    <div class="socials-footer">
+
+                      <ul class="list-inline">
+
+                       
+{% for block in page.social_media_links %}
+    {% include_block block %}
+{% endfor %}
+      
+
+                      </ul>
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!--/ Contact End /-->
+
+
+
+
+ <!--/ footer Star /-->
+
+<section class="section-footer">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-sm-12 col-md-4">
+
+        <div class="widget-a">
+
+          <div class="w-header-a">
+
+            <h3 class="w-title-a heading-color">BSST</h3>
+
+          </div>
+
+          <div class="w-body-a">
+
+            <p class="w-text-a color-text-a" style="font-size:1rem">
+              BSST is a social venture of <a href="https://www.ruralsusdev.org/" > Sustainable Rural Development  </a> 
+              International Limited, a non-profit incorporated in England
+              And Wales, Registration Number 8148076
+              
+
+            </p>
+
+          </div>
+
+          <div class="w-footer-a">
+
+            <ul class="list-unstyled">
+
+              <li class="color-a">
+
+                <span class="color-text-a">Phone .</span> +44 207.549.3750</li>
+
+              <li class="color-a">
+
+                <span class="color-text-a">Email .</span> infosrdi@vesselkaconsult.com</li>
+                <li>
+
+                  <img class="cursor-pointer" src="{% static 'img/GSTCicon.jpg' %}" style="height:120px;width:120px;" onclick="location.href='https://www.gstcouncil.org/'">
+    
+                </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-12 col-md-4 section-md-t3">
+
+        <div class="widget-a">
+
+          <div class="w-header-a">
+
+            <h2 class="w-title-a heading-color">The BSST Social Venture </h2>
+
+          </div>
+
+          <div class="w-body-a">
+
+            <div class="w-body-a">
+
+              <ul class="list-unstyled">
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/aboutus">About</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/faq">FAQ</a>
+
+                </li>
+
+
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/termsandconditions"> General Terms and Conditions</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/termsofuse">Website Terms of Use</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/privacypolicy">Privacy Policy </a>
+
+                </li>
+                <li class="item-list-a">
+
+                    <i class="fa fa-angle-right"></i> <a data-toggle="modal" class="cursor-pointer" data-target="#joinModal">Join Us </a>
+  
+                  </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-12 col-md-4 section-md-t3">
+
+        <div class="widget-a">
+
+          <div class="w-header-a">
+
+            <h3 class="w-title-a heading-color">Our Communities</h3>
+
+          </div>
+
+          <div class="w-body-a">
+
+            <ul class="list-unstyled">
+
+              <li class="item-list-a">
+
+                <i class="fa fa-angle-right"></i> <a href="/georgia" class="country_link_ge_footer">Georgia</a>
+
+              </li>
+
+              <li class="item-list-a">
+
+                <i class="fa fa-angle-right "></i> <a href="#" class="country_link_ukr_footer">Ukraine</a>
+
+              </li>
+
+              <li class="item-list-a">
+
+                <i class="fa fa-angle-right"></i> <a href="#" class="country_link_tur_footer">Turkey</a>
+
+              </li>
+
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer style="width:100%;">
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+                <nav class="nav-footer">
+
+          <ul class="list-inline" style="margin-top:15px;">
+              
+
+            <li class="list-inline-item">
+
+              <a href="/">Home</a>
+
+            </li>
+
+            <li class="list-inline-item">
+
+              <a href="/contactus">Contact</a>
+
+            </li>
+
+          </ul>
+
+        </nav>
+
+        <div class="socials-a">
+
+          <ul class="list-inline">
+
+            <li class="list-inline-item">
+
+              <a href="#">
+
+                <i class="fa fa-facebook f-icon-botton" aria-hidden="true"></i>
+
+              </a>
+
+            </li>
+
+            <li class="list-inline-item">
+
+              <a href="#">
+
+                <i class="fa fa-linkedin f-icon-botton" aria-hidden="true"></i>
+
+              </a>
+
+            </li>
+
+
+            <li class="list-inline-item">
+
+              <a href="#">
+
+                <i class="fa fa-youtube f-icon-botton" aria-hidden="true"></i>
+
+              </a>
+
+            </li>
+
+            <li class="list-inline-item">
+
+              <a href="#">
+
+                <i class="fa fa-instagram f-icon-botton" aria-hidden="true"></i>
+
+              </a>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="copyright-footer">
+
+          <p class="copyright color-text-a">
+
+            &copy; Copyright
+
+            <span class="color-a">SRDI</span> All Rights Reserved.
+          </p>
+
+        </div>
+
+        <div class="credits">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+  </footer>
+
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <div id="preloader"></div>
+
+
+
+  <!-- JavaScript Libraries -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+
+
+
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <script src="{% static 'lib/scrollreveal/scrollreveal.min.js' %}"></script>
+ 
+
+
+  
+  <!-- Template Main Javascript File -->
+
+  <script src="{% static 'ss/main.js' %}"></script>
+  <script src="{% static 'js/navbar_links.js' %}"></script>
+  <script src="{% static 'js/join-us.js' %}"></script>
+  <script src="{% static 'js/jquery.lazy.js' %}"></script>
+
+
+<script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
+<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
+
+</body>
+
+</html>
+

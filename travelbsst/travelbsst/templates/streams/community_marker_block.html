@@ -1,0 +1,54 @@
+  var kazbegi = { lat:{{self.Latitude}}, lng:{{self.Longitude}}};
+       var markerKazbegi = new google.maps.Marker({position: kazbegi, map: map, icon:crocMark});
+        var infoWindowKazbegi = new google.maps.InfoWindow()
+        var infoWindow = new google.maps.InfoWindow();
+  
+        
+
+    $("[id='{{self.community_name}}']").mouseover(function() {
+      
+
+   var latlng = { lat:{{self.Latitude}}, lng:{{self.Longitude}}};
+   var marker = new google.maps.Marker({position: latlng, map: map,icon:crocMark1});
+   
+   marker.addListener('mouseover',function() {
+         
+    bindCommunity(this,map,'{{self.community_name}}', infoWindowKazbegi);
+    
+
+  }); 
+              bindCommunity(marker,map,('{{self.community_name}}').replace(/-/g, ' '),infoWindowKazbegi);
+              
+          
+      });
+      
+
+        markerKazbegi.addListener('mouseover',function() {
+          bindCommunity(this,map,'{{self.community_name}}', infoWindowKazbegi);
+         
+        }); 
+
+    
+
+ {% comment %} $( "#{{self.community_name}}" ).mouseenter(function() {
+  
+        }); {% endcomment %}
+
+
+
+        $("[id='{{self.community_name}}']").mouseleave(function() {
+         
+          var latlng = { lat:{{self.Latitude}}, lng:{{self.Longitude}}};
+          var marker = new google.maps.Marker({position: latlng, map: map,icon:crocMark});
+          marker.addListener('mouseover',function() {
+                
+           bindCommunity(this,map,'{{self.community_name}}', infoWindowKazbegi);
+       
+         }); 
+                     bindCommunity(marker,map,('{{self.community_name}}').replace(/-/g, ' '),infoWindowKazbegi);
+         
+          infoWindowKazbegi.close();
+          
+        })
+
+        

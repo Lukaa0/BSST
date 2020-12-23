@@ -1,0 +1,774 @@
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags%}
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+
+  <meta charset="utf-8">
+
+  <title>BSST</title>
+
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <meta content="" name="keywords">
+
+  <meta content="" name="description">
+ 
+
+
+
+  <!-- Favicons -->
+
+  <link href="{% static 'img/logo.jpg' %}" rel="icon">
+
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+<link href="{% static 'css/grid-gallery.min.css' %}" rel="stylesheet">
+
+  <!-- Google Fonts -->
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+
+
+  <!-- Bootstrap CSS File -->
+
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+
+  <!-- Libraries CSS Files -->
+
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+
+
+
+  <!-- Main Stylesheet File -->
+
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/country-style.css' %}" rel="stylesheet">
+
+  <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+
+  
+
+  <link href="{% static 'css/home.css' %}" rel="stylesheet">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/brands.css"
+
+  integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css"
+
+  integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+
+</head>
+
+
+
+<body>
+
+ 
+
+  <!--     
+
+    <a href="#" class="float">
+
+    <i class="fab fa-facebook-messenger floating-button fa-2x"></i>
+
+    </a> -->
+
+  
+
+
+<style>
+ 
+.heading-color {
+  color: {{self.headings_font_color}};
+}
+.parag1,.parag2,.parag3{
+  font-family: "{{self.headings_font_family}}";
+  font-size: {{self.headings_font_size}} ;
+
+
+padding-bottom: 15px;
+}
+body {
+  font-family: 'Poppins';
+  color: {{self.paragraphs_font_color}};
+}
+
+
+.pr1,.pr2,.pr3{
+  
+  font-family: "{{self.paragraphs_font_family}}";
+  font-size: {{self.paragraphs_font_size}} ;
+ 
+}
+
+</style>
+  </div>
+
+  </div>
+
+
+
+
+
+
+
+  <!--/ Nav Star /-->
+
+  <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+
+    <div class="container">
+
+      <button class="navbar-toggler  burger-bar collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+      <!-- Main Logo -->
+      <a href="/">
+        <div class="modal_logo modal-logo-main" style="background-image: url({% static 'img/logo.jpg' %}); background-size:cover;  margin-top:7px;" > </div>
+          
+          </a>
+            <a class="navbar-brand text-brand" href="/" style="font-size:15px; text-align: center; color: #00635e" > The Black Sea Sustainable<span class="color-b" > <br>  Rural Tourism Program  </span> 
+      
+            
+      
+            </a>
+
+<style>
+ 
+</style>
+     
+
+     <a class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none custom-dbox-popup">
+          <i class="fas fa-seedling" href style="color:#00635e; font-size:1.5rem;"aria-hidden="true"></i>
+
+
+        </a>
+
+
+
+      <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+
+        <!-- Navbar Elements  -->
+
+        <ul class="navbar-nav">
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="/">Home</a>
+
+          
+
+          </li>
+
+          <li class="nav-item">
+
+            
+
+            <div class="dropdown">
+
+                <span id="communitieshover" class="nav-link active">Where to </span>
+
+               <div class="dropdown-content">
+
+                  <a href="/georgia" class="fa fa-map-marker country_link_ge" > <span class="font-family-poppins heading-color">Georgia</span></a>
+
+                <a  href="#" class="fa fa-map-marker country_link_tur" > <span class="font-family-poppins heading-color">Turkey</span></a>
+
+                <a  href="#" class="fa fa-map-marker country_link_ukr" > <span class="font-family-poppins heading-color">Ukraine</span></a>
+
+                </div>
+
+                </div>
+
+              
+
+            
+
+          </li>
+
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="/aboutus">About us</a>
+
+          </li>
+
+          <li class="nav-item">
+
+            <a class="nav-link" href="/contactus">Contact us</a>
+
+          </li>
+
+          </li>
+
+          
+
+        </ul>
+
+      </div>
+
+      <!-- Registration Button -->
+
+       <a class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block custom-dbox-popup"
+       href="https://donorbox.org/the-black-sea-community-fund"  style="border-radius:4px;"> Support Community
+    </a>
+
+    </div>
+
+  </nav>
+
+  <!--/ Nav End /-->
+  {% load static %}
+{% load wagtailcore_tags wagtailimages_tags%}
+<join-us></join-us>
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/brands.css"
+
+    integrity="sha384-BKw0P+CQz9xmby+uplDwp82Py8x1xtYPK3ORn/ZSoe6Dk3ETP59WCDnX+fI1XCKK" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css"
+
+    integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css" rel="stylesheet">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  {% image self.banner_image fill-2800x1600 as img%}
+<div class="img img-fluid w-100 country-image lazy"  data-src="{{img.url}}" style=" background-image: url('img/ge-slide-1-pixelated.jpg');" >
+  <div class="carousel-caption  d-md-block">
+        
+    <h2 class="slide-1-info c-slider-text">
+  
+      <br> <span class="color-o"> {{self.image_colored_text_word1}}</span>{{self.image_text_word1}} <span class="color-o"> {{self.image_colored_text_word2}}</span>{{self.image_text_word2}} <br>
+
+
+      
+
+      
+
+    </h2>    
+    
+  </div>
+</div>
+
+</header>
+
+
+
+<!-- Page Content -->
+
+<section class="py-5" >
+    
+  <div class="container"  id="countrycommunities" name="countrycommunities">
+    
+  
+      <!-- /.col-md-6 -->
+  
+            <h1 class="parag3 heading-color">{{self.country_name}}</h1>
+            <p class="pr1">{{self.country_description}}
+  
+  
+      <!-- /.col-md-6 -->
+  
+    <!-- /.row -->
+    <div style="display:none">
+
+    <img src="{% static 'img/maps-dot-green.png' %}" alt="Croc Marker" id="crocMark">
+</div>
+
+<div style="display:none">
+
+    <img src="{% static 'img/maps-dot-orange.png' %}" alt="Croc Marker" id="crocMark1">
+</div>
+    <script>
+
+        function initMap() {
+          
+           var uluru = {lat:{{self.center_lat}} , lng: {{self.center_lng}} };
+           var crocMark=document.getElementById("crocMark").src;
+           var crocMark1 = document.getElementById("crocMark1").src;
+       // The map, centered at Uluru 41.693630 44.801620
+       var map = new google.maps.Map(
+           document.getElementById('country-map'), {zoom: 7, center: uluru});
+       // The marker, positioned at Uluru
+
+      
+          {% for block in page.markers %}
+          {% include_block block %}
+          {% endfor %}
+   
+       
+       
+     };
+     
+     function bindCommunity(marker,map,communityName, infowindow, com_link){
+          infowindow.close();
+          var contentString ;
+          var comname=communityName;
+           var link = comname.replace(/\s+/g, '-').toLowerCase(); //here was + ".html"
+          
+           contentString = '<div class="media">'+
+    '<span class="media-left">'+
+       '<img onclick=\'location.href="'+ link +'"\'  class="img-responsive img-fluid"style="height:60px;cursor:pointer;"  src="{% static 'img/logo-trans.png' %}" alt="..." >'+
+    '</span>'+
+    '<div class="media-body text-center" style="margin-top:auto;margin-bottom:auto; margin-left:20px;">'+
+        '<h4 onclick=\'location.href="'+ link +'"\' class="media-heading text-center heading-color"  style="cursor:pointer;">'+ comname +'</h4>'+
+    '</div>'+
+'</div>';
+
+          infowindow.setContent(contentString);
+          infowindow.open(map, marker);
+
+          google.maps.event.addListener(map, "click", function(event) {
+           infowindow.close();
+});
+     };
+                 </script>
+
+        
+
+<div class="row" style="margin-top:40px;">
+    <div class="col-md-7 order-md-7 country-card-container">
+        <div class="outer-wrap">
+            <div class="content">
+              
+              <main class="main-area">
+                <section class="cards">
+{% for block in page.cards %}
+    {% include_block block %}
+{% endfor %}
+        </div>
+      </div>
+    </div> 
+    <!-- /.col-md-6 -->
+    <div class="col-md-5 order-md-1 sticky-container">
+
+        <div id="sticky-anchor"> </div>
+        <div id="sticky">
+        <div id="country-map" style="height:100%; width:100%"></div>
+      </div>
+        </div>
+      </div>
+      <div id="map-stop">
+          <h1 class="parag3 heading-color">{{self.service_info_title}}</h1>
+                      <p class="pr1">
+                      {{self.service_info}}
+                           </p>
+          
+                    </div>
+                    <h1 class="parag3 heading-color" style="margin-top:40px;">{{self.images_section_title}}</h1>
+
+  </br> </br>
+  
+  
+  
+  
+  <section class="property-single nav-arrow-b">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          
+          <!--Gallery-->
+          <div id="gg-screen" hidden></div>
+          <main>
+            <div class="Gallery">
+              
+            </div>
+            <div class="main">
+              
+              <div class="gg-box">
+
+                {% for block in page.images %}
+                    {% include_block block %}
+                {% endfor %}
+              </div>
+            </div>
+
+
+          </div>
+         
+         </div>
+            </div>
+          </div>
+        </section>
+    
+  
+  </div>
+  
+  <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  
+  <div class="modal-dialog">
+  
+    <div class="modal-content">              
+  
+      <div class="modal-body">
+  
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+  
+        <img src="" class="imagepreview" style="width: 100%;" >
+  
+      </div>
+  
+    </div>
+  
+  </div>
+  
+  </div>
+  
+    
+  
+    
+  
+  </div>
+  
+    </div>
+    <!-- /.col-md-6 -->
+    
+  </div>
+    
+  
+</section>
+
+
+ <!--/ footer Star /-->
+
+ <section class="section-footer">
+
+    <div class="container">
+  
+      <div class="row">
+  
+        <div class="col-sm-12 col-md-4">
+  
+          <div class="widget-a">
+  
+            <div class="w-header-a">
+  
+              <h3 class="w-title-a heading-color">BSST</h3>
+  
+            </div>
+  
+            <div class="w-body-a">
+  
+              <p class="w-text-a color-text-a" style="font-size:1rem">
+                BSST is a social venture of <a href="https://www.ruralsusdev.org/" > Sustainable Rural Development  </a> 
+                International Limited, a non-profit incorporated in England
+                And Wales, Registration Number 8148076
+                
+  
+              </p>
+  
+            </div>
+  
+            <div class="w-footer-a">
+  
+              <ul class="list-unstyled">
+  
+                <li class="color-a">
+  
+                  <span class="color-text-a">Phone .</span> +44 207.549.3750</li>
+  
+                <li class="color-a">
+  
+                  <span class="color-text-a">Email .</span> infosrdi@vesselkaconsult.com</li>
+                <li>
+
+                  <img class="cursor-pointer" src="{% static 'img/GSTCicon.jpg' %}" style="height:120px;width:120px;" onclick="location.href='https://www.gstcouncil.org/'">
+    
+                </li>
+  
+              </ul>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+        <div class="col-sm-12 col-md-4 section-md-t3">
+  
+          <div class="widget-a">
+  
+            <div class="w-header-a">
+  
+              <h2 class="w-title-a heading-color">The BSST Social Venture </h2>
+  
+            </div>
+  
+            <div class="w-body-a">
+  
+              <div class="w-body-a">
+  
+                <ul class="list-unstyled">
+  
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/aboutus">About</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/faq">FAQ</a>
+
+                </li>
+
+
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/termsandconditions"> General Terms and Conditions</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/termsofuse">Website Terms of Use</a>
+
+                </li>
+
+                <li class="item-list-a">
+
+                  <i class="fa fa-angle-right"></i> <a href="/privacypolicy">Privacy Policy </a>
+
+                </li>
+                <li class="item-list-a">
+
+                    <i class="fa fa-angle-right"></i> <a data-toggle="modal" class="cursor-pointer" data-target="#joinModal">Join Us </a>
+                    
+                  </li>
+                </ul>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+        <div class="col-sm-12 col-md-4 section-md-t3">
+  
+          <div class="widget-a">
+  
+            <div class="w-header-a">
+  
+              <h3 class="w-title-a heading-color">Our Communities</h3>
+  
+            </div>
+  
+            <div class="w-body-a">
+  
+              <ul class="list-unstyled">
+  
+                <li class="item-list-a">
+  
+                  <i class="fa fa-angle-right"></i> <a href="/georgia" class="country_link_ge_footer">Georgia</a>
+  
+                </li>
+  
+                <li class="item-list-a">
+  
+                  <i class="fa fa-angle-right "></i> <a href="#" class="country_link_ukr_footer">Ukraine</a>
+  
+                </li>
+  
+                <li class="item-list-a">
+  
+                  <i class="fa fa-angle-right"></i> <a href="#" class="country_link_tur_footer">Turkey</a>
+  
+                </li>
+  
+  
+  
+              </ul>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </section>
+  
+  <footer style="width:100%;">
+  
+    <div class="container">
+  
+      <div class="row">
+  
+        <div class="col-md-12">
+  
+                    <nav class="nav-footer">
+  
+            <ul class="list-inline" style="margin-top:15px;">
+                
+  
+              <li class="list-inline-item">
+  
+                <a href="/">Home</a>
+  
+              </li>
+  
+              <li class="list-inline-item">
+  
+                <a href="/contactus">Contact</a>
+  
+              </li>
+  
+            </ul>
+  
+          </nav>
+          
+  
+          <div class="socials-a">
+  
+            <ul class="list-inline">
+  
+{% for block in page.social_media_links %}
+    {% include_block block %}
+{% endfor %}
+      
+            </ul>
+  
+          </div>
+  
+          <div class="copyright-footer">
+  
+            <p class="copyright color-text-a">
+  
+              &copy; Copyright
+  
+              <span class="color-a">SRDI</span> All Rights Reserved.  
+            </p>
+  
+          </div>
+  
+          <div class="credits">
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  
+  </footer>
+    </footer>
+<!--/ Footer End /-->
+
+<div id="preloader"></div>
+
+
+ <!-- JavaScript Libraries -->
+
+ <script src="{% static 'js/join-us.js' %}"></script>
+ 
+  <script src="{% static 'lib/jquery/jquery.min.js' %}"></script>
+
+  <script src="{% static 'lib/jquery/jquery-migrate.min.js' %}"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.min.js"></script>
+
+
+  
+
+  <script src="{% static 'lib/bootstrap/js/bootstrap.min.js' %}"></script>
+
+  <script src="{% static 'lib/easing/easing.min.js' %}"></script>
+
+  <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
+
+  <script src="{% static 'lib/scrollreveal/scrollreveal.min.js' %}"></script>
+
+  <!-- Contact Form JavaScript File -->
+
+  
+
+
+
+  <!-- Template Main Javascript File -->
+
+  <script src="{% static 'ss/main.js' %}"></script>
+  <script src="{% static 'js/navbar_links.js' %}"></script>
+  <script type="text/javascript' %}">
+
+    $(function() {
+
+    $('.pop').on('click', function() {
+
+      $('.imagepreview').attr('src', $(this).find('img').attr('src'));
+
+      $('#imagemodal').modal('show');   
+
+    });   
+
+});
+
+
+</script>
+<style>
+  .gg-box img:nth-child(5n+3){
+    grid-row-end:span 1;
+  }
+</style>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAveIyB-kQalMNBm6mEpGPp9Cod8cao-AY&callback=initMap"
+  type="text/javascript"></script>
+  <script src="{% static 'js/jquery.lazy.js' %}"></script>
+<script src="{% static 'js/grid-gallery.min.js' %}"></script>
+
+<script src="{% static 'js/sticky-map.js' %}"></script>
+<script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
+<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
+<script>
+ $(".lazy").Lazy({
+
+        beforeLoad: function(element) {
+
+        },
+      });
+</script>
+</body>
+
+</html>

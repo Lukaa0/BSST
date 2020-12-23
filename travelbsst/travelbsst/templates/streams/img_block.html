@@ -1,0 +1,13 @@
+{% load wagtailcore_tags wagtailimages_tags%}
+
+  {% image self.image max-1489x798 as img%}
+
+ {% comment %} <img src="{{img.url}}"> {% endcomment %}
+
+
+             <a href="{{img.url}}" title="">
+          <div >
+
+						<img src="{{img.url}}" alt="" />
+					</div>
+             </a>

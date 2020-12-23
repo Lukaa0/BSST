@@ -1,0 +1,23 @@
+
+{% load wagtailcore_tags wagtailimages_tags%}
+
+<article class="card" id="{{self.community_name}}" onclick="location.href='{{self.page_link.url}}'" >
+        <a href="{{self.page_link.url}}">
+            <picture class="thumbnail">
+
+  {% image self.image fill-2489x1798 as img%}
+                <img src="{{img.url}}">
+                <ul class="tags">
+                <li><a href="{{self.page_link.url}}" class='tag'>{{self.price_text}}</a>
+                </li>
+            </ul>      
+                                    </picture>
+            <div class="card-content">
+                <h2 class="heading-color">{{self.community_name}}</h2>
+                <p >{{self.community_description}}
+            </p>
+            </div><!-- .card-content -->
+        </a>
+        <button type="button"  onclick="location.href='{{self.page_link.url}}'" class=" btn-booking btn btn-outline-primary">Book now</button>
+
+    </article><!-- .card -->

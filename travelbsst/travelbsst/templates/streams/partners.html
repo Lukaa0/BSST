@@ -1,0 +1,16 @@
+{% load wagtailcore_tags wagtailimages_tags%}
+
+  {% image self.image max-2320x2200 as img%}
+
+
+      <div class="col-lg-2 col-md-4 col-6">
+  
+   {% if self.button_url %}
+        <a  class="d-block mb-4 h-100 pop" id="hoverlogo" href="{{self.button_url}}" >{% else %}
+        <a  class="d-block mb-4 h-100 pop" id="hoverlogo" >{% endif %}
+ 
+              <img class="img-fluid img-thumbnail" src="{{ img.url }}" alt="">
+  
+            </a>
+  
+      </div>

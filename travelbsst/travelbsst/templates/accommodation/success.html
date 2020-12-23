@@ -1,0 +1,69 @@
+{% load static %}
+{% load wagtailcore_tags wagtailimages_tags%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>BSST</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="{% static 'img/logo.jpg' %}" rel="icon">
+  <link href="{% static 'img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="{% static 'lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="{% static 'lib/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+  <!--Gallery Css-->
+    <link rel="stylesheet" href="{% static 'css/grid-gallery.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/master.min.css' %}">
+ 
+  <!-- Main Stylesheet File -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet">
+  <link href="{% static 'css/registration.css' %}" rel="stylesheet">
+
+  <link href="{% static 'css/home.css' %}" rel="stylesheet">
+<link href="{% static 'css/accomodation_style.css' %}" rel="stylesheet">
+  <script src="{% static 'js/jquery-3.4.0.min.js' %}"></script>
+  
+</head>
+
+<body> 
+<div class="jumbotron text-center">
+  <div class="logo-container" style="display: flex; justify-content: center; width: 100%; margin-bottom:10px;">
+  <div style="background-image: url({% static 'img/logo.jpg' %}); background-size:cover; width:130px; height:100px;" ></div>
+</div>
+  <h1 class="display-3">Hi, <label id="customername">{{firstName}}</label> </h1>
+  <p class="lead">Thank you for helping to make a difference by supporting sustainable tourism in one of our communities!  We’ve received your request and we’ll get back to you within 48 hours. <br>
+
+    If your choice is available, we’ll let you know by sending you an invoice or, if your arrival is in less than 11 days, charge your card.  If it is not, we’ll try and suggest a great alternative. If you have any questions or want to cancel your request, please let us know <a href="/contactus" class="color-o"> here. </a> <br>
+    <br>
+    Thanks so much for choosing us and traveling sustainably.  Remember, we’re here to answer any questions! <br>
+    <br>
+
+    The entire BSST team.
+     </p>
+  <hr>
+  <p>
+    Having trouble? <a href="/contactus">Contact us</a>
+  </p>
+  <p class="lead">
+    <a class="btn btn-primary btn-sm" style="background-color: #00635e;" href="/" role="button">Continue to homepage</a>
+  </p>
+</div>
+
+<script src="{% static 'js/booking.js' %}"> </script>
+</body>
+
+</html>
